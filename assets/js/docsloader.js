@@ -6,23 +6,26 @@ document.addEventListener("DOMContentLoaded", function () { // Ensures the DOM i
     const navbarDropdown = document.getElementById('navbar-dropdown');
     const dropdownContent = document.getElementById('navbar-dropdown-content');
 
-    // Toggle the active class when clicking on the dropdown
+    // Since we can't change CSS, we'll directly manipulate the style property
+    // Toggle display property when clicking on the dropdown
     navbarDropdown.addEventListener('click', function () {
-        // Toggle the active class on the dropdown content
-        dropdownContent.classList.toggle('active');
+        // Check the current display state
+        const currentDisplay = window.getComputedStyle(dropdownContent).display;
 
-        // Optional: You can also add a class to the trigger for visual feedback
-        navbarDropdown.classList.toggle('active');
+        // Toggle the display property
+        if (currentDisplay === 'none') {
+            dropdownContent.style.display = 'block';
+        } else {
+            dropdownContent.style.display = 'none';
+        }
     });
 
     // Optional: Close the dropdown when clicking outside of it
     document.addEventListener('click', function (event) {
         if (!navbarDropdown.contains(event.target) && !dropdownContent.contains(event.target)) {
-            dropdownContent.classList.remove('active');
-            navbarDropdown.classList.remove('active');
+            dropdownContent.style.display = 'none';
         }
     });
-
 
     //end of navbar toggle functionality
 
