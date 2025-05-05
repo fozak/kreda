@@ -1,6 +1,16 @@
 //togling the left pane section
 document.addEventListener("DOMContentLoaded", function () { // Ensures the DOM is fully loaded
 
+    //navbar toggle functionality
+    document.getElementById('navbar-dropdown').addEventListener('click', function () {
+        const dropdown = document.getElementById('dropdown-menu');
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
+
     // Get all the collapsible headers (the clickable containers)
     const headers = document.querySelectorAll('.sidebar-group-container.collapsible');
 
