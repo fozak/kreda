@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Team Icon Combo</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .team-logo {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #6c63ff, #8e70ff);
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .team-logo .t-block {
+      position: relative;
+      background: white;
+      color: #6c63ff;
+      font-weight: bold;
+      font-size: 36px;
+      width: 40px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .user-icon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .user-icon:first-child {
+      top: 15px;
+      left: 10px;
+      z-index: 1;
+    }
+
+    .user-icon:last-child {
+      bottom: 15px;
+      right: 10px;
+      z-index: 1;
+    }
+
+    .user-icon i {
+      color: #6c63ff;
+      width: 14px;
+      height: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="team-logo">
+    <div class="user-icon">
+      <i data-lucide="user"></i>
+    </div>
+    <div class="user-icon">
+      <i data-lucide="user"></i>
+    </div>
+    <div class="t-block">T</div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
