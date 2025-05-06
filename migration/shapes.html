@@ -2,74 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gradient Folder Icon</title>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <title>Gradient Folder Icons</title>
   <style>
     body {
+      background: #f0f0f0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-      background: #f9f9f9;
     }
-
-    .folder-wrapper {
+    .icon-container {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
-
-    .folder-icon {
+    svg.folder {
       position: absolute;
       width: 100%;
       height: 100%;
-      color: white;
-      background: linear-gradient(135deg, #ff4f81, #8e5fff);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
-
-    .folder-icon.small {
-      width: 80%;
-      height: 80%;
-      top: 10%;
-      left: 10%;
-      z-index: 2;
-      background: linear-gradient(135deg, #a560f2, #7f42ff);
-    }
-
-    .folder-icon svg {
-      width: 100%;
-      height: 100%;
+    svg.folder.small {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
     }
   </style>
 </head>
 <body>
-  <div class="folder-wrapper">
-    <div class="folder-icon"></div>
-    <div class="folder-icon small" id="inner-folder"></div>
-  </div>
 
-  <script>
-    // Render folder icons using Lucide
-    lucide.createIcons({
-      icons: {
-        folder: lucide.icons.folder,
-      },
-      attrs: {
-        stroke: "white",
-        'stroke-width': 1.5,
-        fill: "none"
-      },
-      nameAttr: 'data-icon'
-    });
+  <div class="icon-container">
+    <!-- SVG Gradient Definition -->
+    <svg width="0" height="0">
+      <defs>
+        <linearGradient id="folderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff4f81"/>
+          <stop offset="100%" stop-color="#8e5fff"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
-    const folderSVG = lucide.icons.folder.toSvg({stroke: 'white', 'stroke-width': 1.5});
-    document.querySelectorAll('.folder-icon').forEach(icon => {
-      icon.innerHTML = folderSVG;
-    });
-  </script>
-</body>
-</html>
+    <!-- Large Folder Icon -->
+    <svg class="folder" viewBox="0 0 24 24" fill="url(#folderGradient)" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 4a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v2H3V4z"/>
+      <path d="M3 8h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/>
+    </svg>
+
+    <!-- Smaller Folder Icon -->
+    <svg class="folder small" vi
