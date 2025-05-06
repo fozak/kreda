@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Lucide Folder and Wallet Icons with Gradient</title>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     body {
       background: #f8f8f8;
@@ -29,7 +29,7 @@
       height: 100%;
       mask-image: linear-gradient(to bottom right, #ff4f81, #8e5fff);
       -webkit-mask-image: linear-gradient(to bottom right, #ff4f81, #8e5fff);
-      color: black; /* base color for masking */
+      color: black;
     }
 
     .icon-layer.small {
@@ -52,28 +52,33 @@
   <div class="icon-container" id="walletIcon"></div>
 
   <script>
-    const icons = ['folder', 'wallet'];
+    const iconsToUse = ['folder', 'wallet'];
 
-    icons.forEach(icon => {
+    // Register individual icons
+    const { createElement, icons } = lucide;
+    iconsToUse.forEach(icon => {
+      lucide.icons[icon] && lucide.createIcons({ icons: { [icon]: lucide.icons[icon] } });
+    });
+
+    iconsToUse.forEach(icon => {
       const container = document.getElementById(`${icon}Icon`);
 
-      // Large icon
+      // Large icon layer
       const bigDiv = document.createElement('div');
       bigDiv.className = 'icon-layer';
-      const bigIcon = lucide.createElement(icon);
+      const bigIcon = createElement(icon, { class: 'lucide' });
       bigDiv.appendChild(bigIcon);
       container.appendChild(bigDiv);
 
-      // Small icon
+      // Small icon layer
       const smallDiv = document.createElement('div');
       smallDiv.className = 'icon-layer small';
-      const smallIcon = lucide.createElement(icon);
+      const smallIcon = createElement(icon, { class: 'lucide' });
       smallDiv.appendChild(smallIcon);
       container.appendChild(smallDiv);
     });
-
-    lucide.createIcons(); // activate
   </script>
 
 </body>
 </html>
+
