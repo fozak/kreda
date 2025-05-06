@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gradient Folder Icons</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .icon-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+    svg.folder {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    svg.folder.small {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="icon-container">
+    <!-- SVG Gradient Definition -->
+    <svg width="0" height="0">
+      <defs>
+        <linearGradient id="folderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff4f81"/>
+          <stop offset="100%" stop-color="#8e5fff"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Large Folder Icon -->
+    <svg class="folder" viewBox="0 0 24 24" fill="url(#folderGradient)" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 4a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v2H3V4z"/>
+      <path d="M3 8h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/>
+    </svg>
+
+    <!-- Smaller Folder Icon -->
+    <svg class="folder small" viewBox="0 0 24 24" fill="url(#folderGradient)" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 4a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v2H3V4z"/>
+      <path d="M3 8h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/>
+    </svg>
+  </div>
+
+
+
+
+</body>
+</html>
+
