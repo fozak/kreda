@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 
+<!-- Built on Frappe. https://frappeframework.com/ -->
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<meta content="Introduction" name="title"/>
-<meta content="open source, ERP, ERPNext, SMEs" name="keywords"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<meta content="en" name="language"/>
-<meta content="article" property="og:type"/>
-<meta content="Introduction" property="og:title"/>
-<meta content="Introduction" name="twitter:title"/>
-<meta content="summary" name="twitter:card"/>
+<meta content="frappe" name="generator"/>
+<meta content="Introduction" name="title"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="en" name="language"/><meta content="article" property="og:type"/><meta content="Introduction" property="og:title"/><meta content="Introduction" name="twitter:title"/><meta content="summary" name="twitter:card"/>
 <title>Introduction</title>
-<link href="/assets/coworker-favicon.svg" rel="shortcut icon" type="image/x-icon"/>
-<link href="/assets/css/combined_docs_styles.css" rel="stylesheet" type="text/css"/>
+<link href="assets/frappe/images/frappe-favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="wiki.html" rel="canonical"/><script data-domain="docs.frappe.io" defer="" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+<link href="assets/frappe/dist/css/website.bundle.RHGQXNFY.css" rel="stylesheet" type="text/css"/>
+<link href="assets/frappe/css/hljs-night-owl.css" rel="stylesheet"/>
+<link href="assets/wiki/dist/css/wiki.bundle.62WRFBMX.css" rel="stylesheet" type="text/css"/>
+<link href="assets/wiki/dist/css/contributions.bundle.V5SJOPBZ.css" rel="stylesheet" type="text/css"/>
+<link href="assets/wiki/dist/css/wiki.bundle.62WRFBMX.css" rel="stylesheet" type="text/css"/>
+<script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function (fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = 0;
+		window.socketio_port = 9000;
+		window.show_language_picker = false;
+	</script>
 </head>
-<body class="" data-path="erpnext/user/manual/en/introduction" frappe-session-status="logged-out">
+<body class="" data-path="wiki/introduction" frappe-session-status="logged-out">
+<script>
+		const isUserPreferenceDarkMode = localStorage.getItem("darkMode");
+		const isSystemPreferenceDarkMode = window.matchMedia?.(
+			"(prefers-color-scheme: dark)"
+		)?.matches;
+		const darkModeState = isUserPreferenceDarkMode
+			? isUserPreferenceDarkMode == "true"
+			: isSystemPreferenceDarkMode;
+		if (darkModeState) {
+			document.body.classList.add("dark");
+		}
+	</script>
+<!--
+Instructions:
+
+1. Use icons from: https://lucide.dev/icons (MIT License)
+2. Only use icons with strokes, not fill
+3. Don't set stroke, fill colour
+4. Use viewport 24 24
+
+Tip: use lucide.svg in /icons for all downloaded icons
+
+-->
 <svg aria-hidden="true" class="icon" id="sw-symbols" style="display: none;" xmlns="http://www.w3.org/2000/svg">
 <symbol id="icon-up-line" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <path d="M13 10.5L8 5.5L3 10.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1312,955 +1344,68 @@
 <select class="form-control"></select>
 </div>
 </nav>
-<!--<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true"> -->
-<!--<div class="modal fade" id="patchDiffModal" tabindex="-1" role="dialog" aria-labelledby="patchDiffModalTitle" aria-hidden="true"> -->
-<div class="content-view row no-gutters flex-nowrap" data-doctype="Wiki Page" data-path="erpnext/user/manual/en/introduction" id="page-c17dfiqg98" source-type="Generator">
+<!-- separated the modal to avoid being unresponsive when inside <nav> -->
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal fade" id="searchModal" role="dialog" tabindex="-1">
+<div class="modal-dialog search-dialog" role="document">
+<div class="modal-content search-modal">
+<div class="modal-header">
+<div>
+<svg class="search-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.3-4.3"></path>
+</svg>
+</div>
+<input class="form-control" id="searchInput" placeholder="Search" type="search"/>
+</div>
+<div class="modal-body">
+<div aria-labelledby="dropdownMenuSearch" class="overflow-hidden search-dropdown-menu w-100"></div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="patchDiffModalTitle" class="modal fade" id="patchDiffModal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal-content review-patch-modal">
+<div class="modal-header">
+<div class="d-flex flex-column">
+<h5 class="modal-title" id="patchDiffModalTitle">Review Changes</h5>
+<span class="small text-muted patch-info"></span>
+</div>
+<div>
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+<div class="view-toggle-buttons-wrapper">
+<div class="view-toggle-buttons">
+<button class="btn btn-sm view-raw active" type="button">View Raw</button>
+<button class="btn btn-sm view-preview" type="button">View Preview</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-body">
+<pre class="diff-content active"></pre>
+<div class="preview-content markdown"></div>
+</div>
+<div class="modal-footer review-modal-footer">
+<button class="btn approve-patch" type="button">Approve</button>
+<button class="btn reject-patch" type="button">Reject</button>
+</div>
+</div>
+</div>
+</div>
+<div class="content-view row no-gutters flex-nowrap" data-doctype="Wiki Page" data-path="wiki/introduction" id="page-1sucq3ulq7" source-type="Generator">
 <div class="sidebar-column">
 <aside class="doc-sidebar">
-<div class="web-sidebar" data-name="erpnext">
-<div class="sidebar-items">
-<ul class="list-unstyled sidebar-group-list" style="min-height: 20px">
-<li class="sidebar-group" data-title="Introduction" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Introduction</span>
-<span class="add-sidebar-page hide" data-group-name="Introduction" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Introduction">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="c17dfiqg98" data-route="erpnext/user/manual/en/introduction" data-title="Introduction" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/v13/user/manual/de.html">
-                        Introduction
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="bqfngd0kt5" data-route="erpnext/user/manual/en/why-ERP" data-title="Why should businesses use an ERP?" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/why-ERP.html">
-                        Why should businesses use an ERP?
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="03h6akgn3k" data-route="erpnext/user/manual/en/do-i-need-an-erp" data-title="Do I Need ERPNext?" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/do-i-need-an-erp.html">
-                        Do I Need ERPNext?
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="enatqb16uq" data-route="erpnext/user/manual/en/open-source" data-title="Open Source" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/open-source.html">
-                        Open Source
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="9gorqntcr4" data-route="erpnext/user/manual/en/the-champion" data-title="The Project Champion" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/the-champion.html">
-                        The Project Champion
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="uvvmbj9670" data-route="erpnext/user/manual/en/concepts-and-terms" data-title="Concepts and Terms" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/concepts-and-terms.html">
-                        Concepts and Terms
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="hu8a0ptlmt" data-route="erpnext/user/manual/en/implementation-strategy" data-title="Implementation Strategy" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/implementation-strategy.html">
-                        Implementation Strategy
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Introduction" data-name="q2ke87sve3" data-route="erpnext/user/manual/en/getting-started-with-erpnext" data-title="Getting Started with ERPNext" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/getting-started-with-erpnext.html">
-                        Getting Started with ERPNext
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Settings" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Settings</span>
-<span class="add-sidebar-page hide" data-group-name="Settings" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Settings">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="v6k5pniai2" data-route="erpnext/user/manual/en/core-settings" data-title="Core Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/core-settings.html">
-                        Core Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="q1nlfep7i6" data-route="erpnext/user/manual/en/module-settings" data-title="Module Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/module-settings.html">
-                        Module Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="5s0e2scsvh" data-route="erpnext/user/manual/en/email" data-title="Email Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/email.html">
-                        Email Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="b6qcqf1alu" data-route="erpnext/user/manual/en/document-naming" data-title="Document Naming" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/document-naming.html">
-                        Document Naming
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="tdm080jcav" data-route="erpnext/user/manual/en/workflow" data-title="Workflow" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/workflow.html">
-                        Workflow
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="2idofa6hm4" data-route="erpnext/user/manual/en/printing" data-title="Printing" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/printing.html">
-                        Printing
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Settings" data-name="6gi0eqvrgc" data-route="erpnext/user/manual/en/automation" data-title="Automation " data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/automation.html">
-                        Automation
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Users and Permissions" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Users and Permissions</span>
-<span class="add-sidebar-page hide" data-group-name="Users and Permissions" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Users and Permissions">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Users and Permissions" data-name="3mddan2953" data-route="erpnext/user/manual/en/users" data-title="Users" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/users.html">
-                        Users
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Users and Permissions" data-name="44efgbu6no" data-route="erpnext/user/manual/en/permissions" data-title="Permissions" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/permissions.html">
-                        Permissions
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Data Management" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Data Management</span>
-<span class="add-sidebar-page hide" data-group-name="Data Management" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Data Management">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="k00q8lfb2k" data-route="erpnext/user/manual/en/data-import" data-title="Data Import" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/data-import.html">
-                        Data Import
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="eeapk1soga" data-route="erpnext/user/manual/en/data-export" data-title="Data Export" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/data-export.html">
-                        Data Export
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="v3cvkdmif8" data-route="erpnext/user/manual/en/chart-of-accounts-importer" data-title="Chart Of Accounts Importer
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/chart-of-accounts-importer.html">
-                        Chart Of Accounts Importer
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="466kh2sr04" data-route="erpnext/user/manual/en/download-backup" data-title="Downloading Backups" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/download-backup.html">
-                        Downloading Backups
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="9i7r6eh3i4" data-route="erpnext/user/manual/en/bulk-rename" data-title="Bulk Renaming of Records" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/bulk-rename.html">
-                        Bulk Renaming of Records
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="g27rbr0g93" data-route="erpnext/user/manual/en/bulk-update" data-title="Bulk Update
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/bulk-update.html">
-                        Bulk Update
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="0bbqqu1kku" data-route="erpnext/user/manual/en/personal-data-download" data-title="Personal Data Download
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/personal-data-download.html">
-                        Personal Data Download
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="8cbudrvsnj" data-route="erpnext/user/manual/en/personal-data-deletion" data-title="Personal Data Deletion
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/personal-data-deletion.html">
-                        Personal Data Deletion
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Data Management" data-name="m6fd3frs09" data-route="erpnext/user/manual/en/delete_company_transactions" data-title="Delete Company Transactions" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/delete_company_transactions.html">
-                        Delete Company Transactions
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Accounting" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Accounting</span>
-<span class="add-sidebar-page hide" data-group-name="Accounting" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Accounting">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="lg4kgqmd8h" data-route="erpnext/user/manual/en/accounting-masters" data-title="Accounting Masters" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/accounting-masters.html">
-                        Accounting Masters
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="0aru2u2msu" data-route="erpnext/user/manual/en/opening-and-closing" data-title="Opening and Closing" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/opening-and-closing.html">
-                        Opening and Closing
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="dfbgo86kim" data-route="erpnext/user/manual/en/general-ledger" data-title="General Ledger" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/general-ledger.html">
-                        General Ledger
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="t3j4vvapq1" data-route="erpnext/user/manual/en/taxes" data-title="Taxes" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/taxes.html">
-                        Taxes
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="ofbnpjo6du" data-route="erpnext/user/manual/en/accounting-reports" data-title="Accounting Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/accounting-reports.html">
-                        Accounting Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="dq0n366pad" data-route="erpnext/user/manual/en/accounts-receivable-and-payable" data-title="Accounts Receivable and Payable" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/accounts-receivable-and-payable.html">
-                        Accounts Receivable and Payable
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="mtl2rhjr1g" data-route="erpnext/user/manual/en/cost-center-and-budgeting" data-title="Cost Center and Budgeting" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/cost-center-and-budgeting.html">
-                        Cost Center and Budgeting
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="bhlrv31gqb" data-route="erpnext/user/manual/en/multi-currency-setup" data-title="Multi Currency Setup" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/multi-currency-setup.html">
-                        Multi Currency Setup
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="e2oclp625v" data-route="erpnext/user/manual/en/deferred-accounting" data-title="Deferred Accounting" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/deferred-accounting.html">
-                        Deferred Accounting
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="c261hceglt" data-route="erpnext/user/manual/en/banking-in-erpnext" data-title="Banking" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/banking-in-erpnext.html">
-                        Banking
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="rm8ls4mhct" data-route="erpnext/user/manual/en/subscription-management" data-title="Subscription Management" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/subscription-management.html">
-                        Subscription Management
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Accounting" data-name="12pk34u601" data-route="erpnext/user/manual/en/shareholder-management" data-title="Shareholder Management" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/shareholder-management.html">
-                        Shareholder Management
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="CRM" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">CRM</span>
-<span class="add-sidebar-page hide" data-group-name="CRM" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group CRM">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="1l8n7tl9fd" data-route="erpnext/user/manual/en/CRM" data-title="Introduction to CRM" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/CRM.html">
-                        Introduction to CRM
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="pcenrarmqq" data-route="erpnext/user/manual/en/crm-masters" data-title="CRM Masters" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/crm-masters.html">
-                        CRM Masters
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="prekl4q0du" data-route="erpnext/user/manual/en/managing-campaigns" data-title="Managing Campaigns" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/managing-campaigns.html">
-                        Managing Campaigns
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="l91u62qvbm" data-route="erpnext/user/manual/en/sales-pipeline" data-title="Sales Pipeline" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/sales-pipeline.html">
-                        Sales Pipeline
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="m256koe84r" data-route="erpnext/user/manual/en/crm_reports" data-title="CRM Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/crm_reports.html">
-                        CRM Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="2le5n1v652" data-route="erpnext/user/manual/en/crm_settings" data-title="CRM Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/crm_settings.html">
-                        CRM Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="fjb6nnr7nq" data-route="erpnext/user/manual/en/social-media-settings" data-title="Social Media Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/social-media-settings.html">
-                        Social Media Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="CRM" data-name="b18b5pkp52" data-route="erpnext/user/manual/en/sales_funnel" data-title="CRM Analytics
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/sales_funnel.html">
-                        CRM Analytics
-
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Buying" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Buying</span>
-<span class="add-sidebar-page hide" data-group-name="Buying" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Buying">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="k9t3s5eboo" data-route="erpnext/user/manual/en/buying" data-title="Introduction to Buying Module" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/buying.html">
-                        Introduction to Buying Module
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="nem18qfbbq" data-route="erpnext/user/manual/en/supplier-essentials" data-title="Supplier Essentials" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/supplier-essentials.html">
-                        Supplier Essentials
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="03psbi39ip" data-route="erpnext/user/manual/en/purchase-transactions" data-title="Purchase Transactions" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/purchase-transactions.html">
-                        Purchase Transactions
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="pjsrvrie9f" data-route="erpnext/user/manual/en/supplier-scorecard" data-title="Supplier Scorecard
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/supplier-scorecard.html">
-                        Supplier Scorecard
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="c7ufe8ds2a" data-route="erpnext/user/manual/en/buying_reports" data-title="Buying Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/buying_reports.html">
-                        Buying Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Buying" data-name="2pscfjd4fb" data-route="erpnext/user/manual/en/buying-settings" data-title="Buying Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/buying-settings.html">
-                        Buying Settings
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Selling" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Selling</span>
-<span class="add-sidebar-page hide" data-group-name="Selling" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Selling">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="obsk9cdlc3" data-route="erpnext/user/manual/en/selling" data-title="Introduction to Selling Module" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/selling.html">
-                        Introduction to Selling Module
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="4n8mosmdmq" data-route="erpnext/user/manual/en/selling-essentials" data-title="Selling Essentials" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/selling-essentials.html">
-                        Selling Essentials
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="2ctqkk07jo" data-route="erpnext/user/manual/en/selling-transactions" data-title="Selling Transactions" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/selling-transactions.html">
-                        Selling Transactions
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="hnukivtmp6" data-route="erpnext/user/manual/en/point-of-sale" data-title="Point of Sale" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/point-of-sale.html">
-                        Point of Sale
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="lk95oqeuqj" data-route="erpnext/user/manual/en/selling-settings" data-title="Selling Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/selling-settings.html">
-                        Selling Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="2u3fbvb8s4" data-route="erpnext/user/manual/en/sales-analytics" data-title="Sales Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/sales-analytics.html">
-                        Sales Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Selling" data-name="s534hb8ao7" data-route="erpnext/user/manual/en/delivery-note" data-title="Delivery Note
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/delivery-note.html">
-                        Delivery Note
-
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Loans" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Loans</span>
-<span class="add-sidebar-page hide" data-group-name="Loans" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Loans">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Loans" data-name="g94aua2enj" data-route="erpnext/user/manual/en/loan-management" data-title="Loan Management
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/loan-management.html">
-                        Loan Management
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Loans" data-name="v7nvp9r57m" data-route="erpnext/user/manual/en/applying-for-loan" data-title="Applying for Loan" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/applying-for-loan.html">
-                        Applying for Loan
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Loans" data-name="59rknpeee3" data-route="erpnext/user/manual/en/loan-process" data-title="Loan Process" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/loan-process.html">
-                        Loan Process
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Loans" data-name="j19pbg5g4g" data-route="erpnext/user/manual/en/loan-disbursement-and-payment" data-title="Loan Disbursement and Repayment" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/loan-disbursement-and-payment.html">
-                        Loan Disbursement and Repayment
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Loans" data-name="lofos3ll8m" data-route="erpnext/user/manual/en/handling-loan-security" data-title="Handling Loan Security" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/handling-loan-security.html">
-                        Handling Loan Security
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Stock" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Stock</span>
-<span class="add-sidebar-page hide" data-group-name="Stock" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Stock">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="579miun277" data-route="erpnext/user/manual/en/stock" data-title="Introduction Stock Module" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock.html">
-                        Introduction Stock Module
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="hnapuncas7" data-route="erpnext/user/manual/en/stock-masters" data-title="Stock Masters" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-masters.html">
-                        Stock Masters
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="umas7817st" data-route="erpnext/user/manual/en/warehouse" data-title="Warehouse
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/warehouse.html">
-                        Warehouse
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="g73t97s5gs" data-route="erpnext/user/manual/en/pricing" data-title="Pricing" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/pricing.html">
-                        Pricing
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="tcmfudm58i" data-route="erpnext/user/manual/en/rules" data-title="Rules" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/rules.html">
-                        Rules
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="707e87dcm8" data-route="erpnext/user/manual/en/stock-transactions" data-title="Stock Transactions" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-transactions.html">
-                        Stock Transactions
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="ea4g1tauf1" data-route="erpnext/user/manual/en/stock-inspection" data-title="Stock Inspection" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-inspection.html">
-                        Stock Inspection
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="ucnp7up8aj" data-route="erpnext/user/manual/en/serial-and-batch" data-title="Serial and Batch" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/serial-and-batch.html">
-                        Serial and Batch
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="60qpjrtd6e" data-route="erpnext/user/manual/en/disassembly-order" data-title="Disassembly Order" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/disassembly-order.html">
-                        Disassembly Order
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="jtn36jjjbg" data-route="erpnext/user/manual/en/stock-settings" data-title="Stock Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-settings.html">
-                        Stock Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="u3dl9g1b3q" data-route="erpnext/user/manual/en/stock-reposting-settings" data-title="Stock Reposting Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-reposting-settings.html">
-                        Stock Reposting Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="oke5f0kv3r" data-route="erpnext/user/manual/en/stock-reports" data-title="Stock Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-reports.html">
-                        Stock Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="gqa4o9dni4" data-route="erpnext/user/manual/en/stock-adjustment-cogs-with-negative-stock" data-title="Stock Adjustment / COGS with Negative Stock" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/stock-adjustment-cogs-with-negative-stock.html">
-                        Stock Adjustment / COGS with Negative Stock
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="57ruheh5jp" data-route="erpnext/stock-closing-entry" data-title="Stock Closing Entry" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/stock-closing-entry.html">
-                        Stock Closing Entry
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="6jq952ouhl" data-route="erpnext/stock-reposting" data-title="Stock Reposting In ERPNext" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/stock-reposting.html">
-                        Stock Reposting In ERPNext
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Stock" data-name="d0cc6at7mq" data-route="erpnext/change-valuation-method" data-title="Change Valuation Method" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/change-valuation-method.html">
-                        Change Valuation Method
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Manufacturing" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Manufacturing</span>
-<span class="add-sidebar-page hide" data-group-name="Manufacturing" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Manufacturing">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="fpakac442q" data-route="erpnext/user/manual/en/onboarding" data-title="Basics of Manufacturing" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/onboarding.html">
-                        Basics of Manufacturing
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="5kug8ioj1l" data-route="erpnext/user/manual/en/manufacturing" data-title="Introduction to Manufacturing																																																				" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/manufacturing.html">
-                        Introduction to Manufacturing
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="3fqa2rs91k" data-route="erpnext/user/manual/en/manufacturing-settings" data-title="Manufacturing Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/manufacturing-settings.html">
-                        Manufacturing Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="sk4pcvqg31" data-route="erpnext/user/manual/en/manufacturing-dashboard" data-title="Manufacturing Dashboard
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/manufacturing-dashboard.html">
-                        Manufacturing Dashboard
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="9vcgss0apo" data-route="erpnext/user/manual/en/manufacturing-reports" data-title="Manufacturing Reports
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/manufacturing-reports.html">
-                        Manufacturing Reports
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="dilpld9i38" data-route="erpnext/user/manual/en/production-and-material-planning" data-title="Production and Material Planning" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/production-and-material-planning.html">
-                        Production and Material Planning
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="2ksidnqhl8" data-route="erpnext/user/manual/en/bill-of-material" data-title="Bill of Materials" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/bill-of-material.html">
-                        Bill of Materials
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="6jbrjd0puq" data-route="erpnext/user/manual/en/track-semi-finished-goods" data-title="Track Semi-Finished Goods" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/track-semi-finished-goods.html">
-                        Track Semi-Finished Goods
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="j6f4h2fdbc" data-route="erpnext/user/manual/en/subcontracting-in-erpnext" data-title="Subcontracting in ERPNext" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/subcontracting-in-erpnext.html">
-                        Subcontracting in ERPNext
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Manufacturing" data-name="mg9c18lprj" data-route="erpnext/stock-reservation-for-work-order" data-title="Stock Reservation for Work Order																																																																														" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/stock-reservation-for-work-order.html">
-                        Stock Reservation for Work Order
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Project" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Project</span>
-<span class="add-sidebar-page hide" data-group-name="Project" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Project">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Project" data-name="5oopgb064e" data-route="erpnext/user/manual/en/time-based-payout" data-title="Time Based Payout" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/time-based-payout.html">
-                        Time Based Payout
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Project" data-name="tnoq6kshda" data-route="erpnext/user/manual/en/project-reports" data-title="Project Reports" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/project-reports.html">
-                        Project Reports
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Project" data-name="aj8jnqfvh9" data-route="erpnext/user/manual/en/projects" data-title="Project Essentials" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/projects.html">
-                        Project Essentials
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Project" data-name="o3oe62uvd1" data-route="erpnext/user/manual/en/time-tracking" data-title="Time Tracking" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/time-tracking.html">
-                        Time Tracking
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Support" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Support</span>
-<span class="add-sidebar-page hide" data-group-name="Support" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Support">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="v843htibpt" data-route="erpnext/user/manual/en/support" data-title="Support Issues" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/support.html">
-                        Support Issues
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="j0gpoo2gqm" data-route="erpnext/user/manual/en/support-settings" data-title="Support Settings" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/support-settings.html">
-                        Support Settings
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="cstbacr0lf" data-route="erpnext/user/manual/en/service-level-agreement" data-title="Service Level Agreement
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/service-level-agreement.html">
-                        Service Level Agreement
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="t1cdg25rk6" data-route="erpnext/user/manual/en/support_reports" data-title="Support Reports
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/support_reports.html">
-                        Support Reports
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="go0jp7rjdm" data-route="erpnext/user/manual/en/maintenance" data-title="Maintenance" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/maintenance.html">
-                        Maintenance
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Support" data-name="4b7a3o2m62" data-route="erpnext/user/manual/en/warranty" data-title="Warranty" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/warranty.html">
-                        Warranty
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Assets" data-type="Wiki Sidebar">
+<div class="web-sidebar" data-name="wiki">
+<div class="sidebar-items"><ul class="list-unstyled sidebar-group-list" style="min-height: 20px">
+<li class="sidebar-group" data-title="Get Started" data-type="Wiki Sidebar">
 <div class="sidebar-group-container collapsible">
 <svg class="icon rotate" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
 </svg>
-<span class="sidebar-group-title">Assets</span>
-<span class="add-sidebar-page hide" data-group-name="Assets" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Assets">
+<span class="sidebar-group-title">Get Started</span>
+<span class="add-sidebar-page hide" data-group-name="Get Started" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Get Started">
 <svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
 <line x1="12" x2="12" y1="5" y2="19"></line>
 <line x1="5" x2="19" y1="12" y2="12"></line>
@@ -2268,36 +1413,35 @@
 </span>
 </div>
 <ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Assets" data-name="rdj1dgejev" data-route="erpnext/user/manual/en/asset" data-title="Asset" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item sidebar-item-active" data-group-name="Get Started" data-name="1sucq3ulq7" data-route="wiki/introduction" data-title="Introduction" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/asset.html">
-                        Asset
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki.html">
+      Introduction
+    </a>
 </div>
 </li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Assets" data-name="39sa82dhjr" data-route="erpnext/user/manual/en/asset-reports" data-title="Asset Reports" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Get Started" data-name="r9usfjoldc" data-route="wiki/install-locally" data-title="Install locally" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/asset-reports.html">
-                        Asset Reports
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/install-locally.html">
+      Install locally
+    </a>
 </div>
 </li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Assets" data-name="eqoqi2edl4" data-route="erpnext/user/manual/en/maintenance-of-assets" data-title="Maintenance of Assets" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Get Started" data-name="rbdjsog8d1" data-route="wiki/use-on-frappe-cloud" data-title="Use on Frappe Cloud" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/maintenance-of-assets.html">
-                        Maintenance of Assets
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/use-on-frappe-cloud.html">
+      Use on Frappe Cloud
+    </a>
 </div>
 </li>
 </ul>
-</li>
-<li class="sidebar-group" data-title="Quality" data-type="Wiki Sidebar">
+</li><li class="sidebar-group" data-title="Learn" data-type="Wiki Sidebar">
 <div class="sidebar-group-container collapsible">
 <svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
 </svg>
-<span class="sidebar-group-title">Quality</span>
-<span class="add-sidebar-page hide" data-group-name="Quality" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Quality">
+<span class="sidebar-group-title">Learn</span>
+<span class="add-sidebar-page hide" data-group-name="Learn" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Learn">
 <svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
 <line x1="12" x2="12" y1="5" y2="19"></line>
 <line x1="5" x2="19" y1="12" y2="12"></line>
@@ -2305,43 +1449,56 @@
 </span>
 </div>
 <ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Quality" data-name="pjkrl91mnv" data-route="erpnext/user/manual/en/quality-management" data-title="Quality Management System" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="rcj3aor3ii" data-route="wiki/new-wiki-page" data-title="New Wiki Page" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/quality-management.html">
-                        Quality Management System
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/new-wiki-page.html">
+      New Wiki Page
+    </a>
 </div>
 </li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Quality" data-name="oldir4dlad" data-route="erpnext/user/manual/en/quality_meeting" data-title="Quality Meeting" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="rdtt5elh6j" data-route="wiki/wiki-space" data-title="Wiki Space" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/quality_meeting.html">
-                        Quality Meeting
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/wiki-space.html">
+      Wiki Space
+    </a>
 </div>
 </li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Quality" data-name="u7ib4lvq77" data-route="erpnext/user/manual/en/review-and-action" data-title="Review and Action" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="rdlogvb251" data-route="wiki/new-wiki-group" data-title="New Wiki Group" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/review-and-action.html">
-                        Review and Action
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/new-wiki-group.html">
+      New Wiki Group
+    </a>
 </div>
 </li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Quality" data-name="8k4hoqmnkm" data-route="erpnext/user/manual/en/quality-feedback" data-title="Quality Feedback" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="re5s0rrirn" data-route="wiki/check-page-revisions" data-title="Check Page Revisions" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/quality-feedback.html">
-                        Quality Feedback
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/check-page-revisions.html">
+      Check Page Revisions
+    </a>
+</div>
+</li>
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="reeo87jju0" data-route="wiki/approving-changes" data-title="Approving Changes" data-type="Wiki Page">
+<div>
+<a class="text-sm sidebar-group-item-title" href="wiki/approving-changes.html">
+      Approving Changes
+    </a>
+</div>
+</li>
+<li class="sidebar-item sidebar-group-item" data-group-name="Learn" data-name="reuufv2ckg" data-route="wiki/wiki-settings" data-title="Wiki Settings" data-type="Wiki Page">
+<div>
+<a class="text-sm sidebar-group-item-title" href="wiki/wiki-settings.html">
+      Wiki Settings
+    </a>
 </div>
 </li>
 </ul>
-</li>
-<li class="sidebar-group" data-title="Website" data-type="Wiki Sidebar">
+</li><li class="sidebar-group" data-title="Guides" data-type="Wiki Sidebar">
 <div class="sidebar-group-container collapsible">
 <svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
 </svg>
-<span class="sidebar-group-title">Website</span>
-<span class="add-sidebar-page hide" data-group-name="Website" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Website">
+<span class="sidebar-group-title">Guides</span>
+<span class="add-sidebar-page hide" data-group-name="Guides" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Guides">
 <svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
 <line x1="12" x2="12" y1="5" y2="19"></line>
 <line x1="5" x2="19" y1="12" y2="12"></line>
@@ -2349,45 +1506,21 @@
 </span>
 </div>
 <ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Website" data-name="rt2muctcfh" data-route="erpnext/user/manual/en/website" data-title="Website Setup" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Guides" data-name="rf666qm0o2" data-route="wiki/wiki-migration-guide" data-title="Wiki Migration Guide" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/website.html">
-                        Website Setup
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Website" data-name="obeio1sc7b" data-route="erpnext/user/manual/en/website-components" data-title="Website Components" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/website-components.html">
-                        Website Components
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Website" data-name="pavs52ugen" data-route="erpnext/user/manual/en/blogs" data-title="Blogs" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/blogs.html">
-                        Blogs
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Website" data-name="j5jghkothb" data-route="erpnext/user/manual/en/website-settings" data-title="Website Settings
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/website-settings.html">
-                        Website Settings
-
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/wiki-migration-guide.html">
+      Wiki Migration Guide
+    </a>
 </div>
 </li>
 </ul>
-</li>
-<li class="sidebar-group" data-title="Tools" data-type="Wiki Sidebar">
+</li><li class="sidebar-group" data-title="Contribute" data-type="Wiki Sidebar">
 <div class="sidebar-group-container collapsible">
 <svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
 </svg>
-<span class="sidebar-group-title">Tools</span>
-<span class="add-sidebar-page hide" data-group-name="Tools" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Tools">
+<span class="sidebar-group-title">Contribute</span>
+<span class="add-sidebar-page hide" data-group-name="Contribute" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Contribute">
 <svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
 <line x1="12" x2="12" y1="5" y2="19"></line>
 <line x1="5" x2="19" y1="12" y2="12"></line>
@@ -2395,198 +1528,11 @@
 </span>
 </div>
 <ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="ohcgdes4q2" data-route="erpnext/user/manual/en/to-do" data-title="To Do" data-type="Wiki Page">
+<li class="sidebar-item sidebar-group-item" data-group-name="Contribute" data-name="rfdcumr3ua" data-route="wiki/how-to-contribute" data-title="How to contribute" data-type="Wiki Page">
 <div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/to-do.html">
-                        To Do
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="gsqjqt63m7" data-route="erpnext/user/manual/en/notes" data-title="Notes
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/notes.html">
-                        Notes
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="jt7qcrrggs" data-route="erpnext/user/manual/en/video" data-title="Video
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/video.html">
-                        Video
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="smr8c2v93l" data-route="erpnext/user/manual/en/calendar" data-title="Calendar
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/calendar.html">
-                        Calendar
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="8ecl9alrtj" data-route="erpnext/user/manual/en/dashboard" data-title="Dashboard" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/dashboard.html">
-                        Dashboard
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="bcj4rsf2df" data-route="erpnext/user/manual/en/Global-search" data-title="Global Search
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/Global-search.html">
-                        Global Search
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="j1eflnncak" data-route="erpnext/user/manual/en/desktop" data-title="Desktop
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/desktop.html">
-                        Desktop
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="5okjo44vvl" data-route="erpnext/user/manual/en/assignment" data-title="Assignment
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/assignment.html">
-                        Assignment
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="etmi3dhfig" data-route="erpnext/user/manual/en/tags" data-title="Tags
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/tags.html">
-                        Tags
-
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="4m06951ak7" data-route="erpnext/user/manual/en/kanban-board" data-title="Kanban Board" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/kanban-board.html">
-                        Kanban Board
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Tools" data-name="rb49q9sqcl" data-route="erpnext/user/manual/en/collaborating-around-forms" data-title="Collaborating Around Forms
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/collaborating-around-forms.html">
-                        Collaborating Around Forms
-
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="ERPNext Integrations" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">ERPNext Integrations</span>
-<span class="add-sidebar-page hide" data-group-name="ERPNext Integrations" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group ERPNext Integrations">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="ERPNext Integrations" data-name="lfcf13i8fd" data-route="erpnext/user/manual/en/erpnext_integration" data-title="Integration Categories" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/erpnext_integration.html">
-                        Integration Categories
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Regional" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Regional</span>
-<span class="add-sidebar-page hide" data-group-name="Regional" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Regional">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Regional" data-name="5c0cltkc5r" data-route="erpnext/user/manual/en/regional" data-title="Regional" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/regional.html">
-                        Regional
-                      </a>
-</div>
-</li>
-<li class="sidebar-item sidebar-group-item" data-group-name="Regional" data-name="e07t5i6272" data-route="erpnext/user/manual/en/translations" data-title="Translations" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/translations.html">
-                        Translations
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Non Profit" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Non Profit</span>
-<span class="add-sidebar-page hide" data-group-name="Non Profit" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Non Profit">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Non Profit" data-name="khqslf0jrj" data-route="erpnext/user/manual/en/non-profit-introduction" data-title="Introduction
-" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/non-profit-introduction.html">
-                        Introduction
-
-                      </a>
-</div>
-</li>
-</ul>
-</li>
-<li class="sidebar-group" data-title="Miscellanous" data-type="Wiki Sidebar">
-<div class="sidebar-group-container collapsible">
-<svg class="icon" fill="none" viewbox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 8.53967L4 3.46033C4 3.05582 4.45534 2.81874 4.78673 3.05071L8.41483 5.59038C8.69919 5.78943 8.69919 6.21057 8.41483 6.40962L4.78673 8.94929C4.45534 9.18126 4 8.94418 4 8.53967Z" fill="currentColor"></path>
-</svg>
-<span class="sidebar-group-title">Miscellanous</span>
-<span class="add-sidebar-page hide" data-group-name="Miscellanous" data-placement="top" data-toggle="tooltip" title="New Wiki Page in the group Miscellanous">
-<svg class="feather feather-plus" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-<line x1="12" x2="12" y1="5" y2="19"></line>
-<line x1="5" x2="19" y1="12" y2="12"></line>
-</svg>
-</span>
-</div>
-<ul class="list-unstyled sidebar-group-item-list hidden" style="min-height: 20px">
-<li class="sidebar-item sidebar-group-item" data-group-name="Miscellanous" data-name="01tesv1md1" data-route="erpnext/user/manual/en/help-articles" data-title="Help Articles" data-type="Wiki Page">
-<div>
-<a class="text-sm sidebar-group-item-title" href="erpnext/user/manual/en/help-articles.html">
-                        Help Articles
-                      </a>
+<a class="text-sm sidebar-group-item-title" href="wiki/how-to-contribute.html">
+      How to contribute
+    </a>
 </div>
 </li>
 </ul>
@@ -2614,21 +1560,19 @@
 </svg>
 <span class="small">View Sidebar</span>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </aside>
 </div>
 <div class="main-column doc-main">
 <div class="wiki-page-content">
-<main>
-<div class="from-markdown markdown">
+<main><div class="from-markdown markdown">
 <div class="alert alert-warning admin-banner hide" role="alert">
 <div class="d-flex justify-content-between align-items-center">
 <div>This space has
-                  <strong id="pending-patches-count">{{ pending_patches_count }}</strong> change(s) pending for
-                  review.
-                </div>
+				<strong id="pending-patches-count">{{ pending_patches_count }}</strong> change(s) pending for
+				review.
+			</div>
 <button class="btn btn-sm btn-warning review-changes-btn">Review changes</button>
 </div>
 </div>
@@ -2636,79 +1580,50 @@
 <h1 class="wiki-title">Introduction</h1>
 </div>
 <div class="wiki-content">
-<h2 id="what-is-erpnext">What is ERPNext?</h2>
-<p>ERPNext is business management software that helps companies stay on top of their operations, whether
-                it’s tracking inventory, managing finances, handling projects, or keeping customers happy. Think of it
-                as the central nervous system for your business, bringing everything together in one place.</p>
-<p>Most ERPs are clunky, expensive, and a headache to customize. ERPNext is different. It is open-source,
-                cloud-ready, and built to be flexible. You get the power of an enterprise system without the usual
-                complications.</p>
-<div align="center">
-<img src="files/hero_image.png" style="margin: 0 0 0 0"/>
-</div>
-<h2 id="why-erpnext">Why ERPNext?</h2>
-<p>Because running a business is already hard enough. Your ERP should not make it harder.</p>
-<p>With ERPNext, you get a complete set of tools for all your business needs, built in and ready to use.
-                With ERPNext, you get:</p>
+<h2 id="what-is-wiki">What is Wiki?</h2>
+<p>Wiki is an open-source wiki management application built on the Frappe Framework. It's designed to handle dynamic, text-heavy content like documentation and knowledge bases. Think of it as a flexible content management system that allows for quick publishing of small changes and new pages without requiring deployments</p>
+<p><img alt="" class="screenshot" src="files/Screenshot 2025-03-13 at 4.57.34 PM.png"/></p>
+<h2 id="why-wiki">Why Wiki?</h2>
+<p>Because managing knowledge shouldn't be complicated. Your wiki should be easy to use, flexible, and powerful.</p>
+<p>With Wiki, you get:</p>
 <ol>
-<li>A complete suite of tools – From accounting to Accounting to Inventory, everything you need is
-                  built-in.</li>
-<li>No vendor lock-in – Open-source means you own your data and have the freedom to customize.</li>
-<li>Easy to use – A clean, modern interface that doesn’t feel like it was built in the ’90s.</li>
-<li>Cost-effective – No sky-high licensing fees. Just powerful software that works.</li>
+<li>An open-source solution that you can customize to your needs</li>
+<li>Built on the robust Frappe Framework, ensuring scalability and reliability</li>
+<li>No vendor lock-in - you own your data and have freedom to modify</li>
 </ol>
-<p>Whether you are a small business or a growing enterprise, ERPNext helps you stay organized, automate
-                the boring stuff, and focus on what really matters - running your business.</p>
-<h2 id="key-features">Key features</h2>
-<p>ERPNext will help you to:</p>
+<h2 id="key-features">Key Features</h2>
+<p>Wiki will help you to:</p>
 <ol>
-<li>Keep track of the financial indicators of the organization.</li>
-<li>Track all invoices and payments.</li>
-<li>Know what quantity of which product is available in stock.</li>
-<li>Identify and track your key performance indicators (KPIs).</li>
-<li>Identify open customer queries.</li>
-<li>Manage employee payroll.</li>
-<li>Assign tasks and follow up on them.</li>
-<li>Maintain a database of all your customers, suppliers, and contacts.</li>
-<li>Prepare quotations.</li>
-<li>Track your budgets and spending.</li>
-<li>Determine effective selling price based on the actual raw material, machinery and effort cost.</li>
-<li>Get reminders on maintenance schedules.</li>
-<li>Publish your website.</li>
+<li>Create and manage wiki pages</li>
+<li>Organize content with wiki spaces</li>
+<li>Set up controlled wiki updates with approval mechanisms</li>
+<li>Add attachments to pages</li>
+<li>Generate automatic table of contents</li>
+<li>Maintain version history of documents</li>
+<li>Use markdown format for content authoring</li>
+<li>Caching for fast load times</li>
+<li>Support custom scripts via wiki settings</li>
+<li>Edit dynamic sidebar through drag-and-drop</li>
 </ol>
-<p>And a ton more.</p>
 <h2 id="under-the-hood">Under the Hood</h2>
-<ol>
-<li><a href="https://github.com/frappe/frappe"><strong>Frappe Framework</strong></a>: A full-stack web
-                  application framework written in Python and Javascript. The framework provides a robust foundation for
-                  building web applications, including a database abstraction layer, user authentication, and a REST
-                  API.</li>
-<li><a href="https://github.com/frappe/frappe-ui"><strong>Frappe UI</strong></a>: A Vue-based UI
-                  library, to provide a modern user interface. The Frappe UI library provides a variety of components
-                  that can be used to build single-page applications on top of the Frappe Framework.</li>
-</ol>
+<p><a href="https://github.com/frappe/frappe"><strong>Frappe Framework</strong></a>: A full-stack web application framework written in Python and JavaScript. The framework provides a robust foundation for building web applications, including a database abstraction layer, user authentication, and a REST API.</p>
 <h2 id="installation">Installation</h2>
-<p>To install/setup the app, follow the <a href="https://github.com/frappe/erpnext?tab=readme-ov-file#production-setup">guidelines here</a>.</p>
+<p>To install/setup the app, follow the guidelines <a href="https://github.com/frappe/wiki?tab=readme-ov-file#local">here</a>.</p>
 <h2 id="learning-and-community">Learning and community</h2>
 <ol>
-<li><a href="https://frappe.school">Frappe School</a> - Learn Frappe Framework and ERPNext from the
-                  various courses by the maintainers or from the community.</li>
-<li><a href="https://github.com/frappe/erpnext">GitHub</a> - Contribute to ERPNext and explore its
-                  open-source code, issues, and discussions..</li>
-<li><a href="https://discuss.erpnext.com/">Discussion Forum</a> - Engage with community of ERPNext users
-                  and service providers.</li>
-<li><a href="https://erpnext_public.t.me">Telegram Group</a> - Get instant help from huge community of
-                  users.</li>
+<li><a href="https://github.com/frappe/wiki">GitHub</a> - Contribute to Wiki and explore its open-source code, issues, and discussions</li>
+<li><a href="https://t.me/frappewiki">Telegram Group</a> - Get instant help from huge community of users</li>
+<li><a href="https://discuss.frappe.io/c/wiki/72">Discussion Forum</a> - Engage with community of Wiki users.</li>
 </ol>
 </div>
-<input class="d-none" name="wiki-page-name" value="c17dfiqg98"/>
+<input class="d-none" name="wiki-page-name" value="1sucq3ulq7"/>
 <div aria-hidden="true" aria-labelledby="revisionsModalTitle" class="modal revisions-modal fade" id="revisionsModal" role="dialog" tabindex="-1">
 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 <div class="modal-content">
 <div class="modal-header">
 <div class="d-flex flex-column">
 <h5 class="modal-title revision-title" id="revisionsModalTitle">Introduction</h5>
-<span class="small text-muted revision-time">palkan edited 3 months ago</span>
+<span class="small text-muted revision-time">pratik edited 1 month ago</span>
 </div>
 <button aria-label="Close" class="close" data-dismiss="modal" type="button">
 <span aria-hidden="true">×</span>
@@ -2716,7 +1631,43 @@
 </div>
 <div class="modal-body">
 <div class="revision-content wiki-content">
-<h3>No Revisions</h3>
+<h2 id="what-is-wiki">What is Wiki?</h2>
+<p>Wiki is an open-source wiki management application built on the Frappe Framework. It's designed to handle dynamic, text-heavy content like documentation and knowledge bases. Think of it as a flexible content management system that allows for quick publishing of small changes and new pages without requiring deployments.</p>
+<p><img alt="" class="screenshot" src="files/Screenshot 2025-03-13 at 4.57.34 PM.png"/></p>
+<h2 id="why-wiki">Why Wiki?</h2>
+<p>Because managing knowledge shouldn't be complicated. Your wiki should be easy to use, flexible, and powerful.</p>
+<p>With Wiki, you get:</p>
+<ol>
+<li>An open-source solution that you can customize to your needs</li>
+<li>Built on the robust Frappe Framework, ensuring scalability and reliability</li>
+<li>No vendor lock-in - you own your data and have freedom to modify</li>
+</ol>
+<h2 id="key-features">Key Features</h2>
+<p>Wiki will help you to:</p>
+<ol>
+<li>Create and manage wiki pages</li>
+<li>Organize content with wiki spaces</li>
+<li>Set up controlled wiki updates with approval mechanisms</li>
+<li>Add attachments to pages</li>
+<li>Generate automatic table of contents</li>
+<li>Maintain version history of documents</li>
+<li>Use markdown format for content authoring</li>
+<li>Caching for fast load times</li>
+<li>Support custom scripts via wiki settings</li>
+<li>Edit dynamic sidebar through drag-and-drop</li>
+</ol>
+<h2 id="under-the-hood">Under the Hood</h2>
+<ol>
+<li><a href="https://github.com/frappe/frappe"><strong>Frappe Framework</strong></a>: A full-stack web application framework written in Python and JavaScript. The framework provides a robust foundation for building web applications, including a database abstraction layer, user authentication, and a REST API.</li>
+</ol>
+<h2 id="installation">Installation</h2>
+<p>To install/setup the app, follow the guidelines <a href="https://github.com/frappe/wiki?tab=readme-ov-file#local">here</a>.</p>
+<h2 id="learning-and-community">Learning and community</h2>
+<ol>
+<li><a href="https://github.com/frappe/wiki">GitHub</a> - Contribute to Wiki and explore its open-source code, issues, and discussions</li>
+<li><a href="https://t.me/frappewiki">Telegram Group</a> - Get instant help from huge community of users</li>
+<li><a href="https://discuss.frappe.io/c/wiki/72">Discussion Forum</a> - Engage with community of Wiki users.</li>
+</ol>
 </div>
 </div>
 <div class="modal-footer d-flex justify-content-between">
@@ -2741,23 +1692,23 @@
 <label class="text-muted text-xs" for="pageRoute">Route</label>
 <div class="flex align-items-center">
 <div class="text-sm wiki-space-route-block" title="Wiki Space route (can't be modified)">
-                            erpnext/
-                          </div>
-<input class="form-control" id="pageRoute" name="pageRoute" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" type="text" value="user/manual/en/introduction"/>
+                                wiki/
+                            </div>
+<input class="form-control" id="pageRoute" name="pageRoute" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" type="text" value="introduction"/>
 </div>
 </div>
 <div class="mt-4 flex align-content-center">
 <input id="pageHideOnSidebar" name="pageHideOnSidebar" type="checkbox"/>
 <label class="mt-2" for="pageHideOnSidebar">
-                          Hide on Sidebar
+                            Hide on Sidebar
                         </label>
 </div>
 </div>
 </div>
 <div class="modal-footer">
 <button class="btn btn-primary btn-sm update-page-settings-button" data-modal-button="update" type="button">
-                      Update
-                    </button>
+                    Update
+                </button>
 </div>
 </div>
 </div>
@@ -2766,21 +1717,21 @@
 <div class="wiki-editor hide">
 <div class="wiki-edit-control-btn">
 <button class="btn btn-secondary btn-sm text-sm" id="toggle-btn">
-                Preview
-              </button>
+    Preview
+  </button>
 <div class="wiki-edit-control-btn flex">
 <div class="btn btn-secondary discard-edit-btn btn-sm" data-new="false">
-                  Discard
-                </div>
+      Discard
+    </div>
 <div class="btn-group">
 <div class="btn btn-group btn-primary save-wiki-page-btn btn-sm" data-wiki-button="saveWikiPage" type="button">
-                    Save
-                  </div>
+        Save
+      </div>
 <div aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" type="button">
 <span class="sr-only">Toggle Dropdown</span>
 </div>
 <div aria-labelledby="saveDropdownMenuButton" class="dropdown-menu">
-<a class="dropdown-item text-sm" data-wiki-button="draftWikiPage" href="erpnext/v13/user/manual/de.html#">Draft</a>
+<a class="dropdown-item text-sm" data-wiki-button="draftWikiPage" href="wiki.html#">Draft</a>
 </div>
 </div>
 </div>
@@ -2890,11 +1841,9 @@
 </div>
 </div>
 </div>
-<div class="flex my-4 wiki-page-meta d-print-none">
-<div class="flex">
+<div class="flex my-4 wiki-page-meta d-print-none"><div class="flex">
 <span class="text-sm d-none d-sm-block">Was this article helpful?</span>
-<span class="text-sm ml-2 feedback-btn" data-target="#feedbackModal" data-toggle="modal">Give
-                Feedback</span>
+<span class="text-sm ml-2 feedback-btn" data-target="#feedbackModal" data-toggle="modal">Give Feedback</span>
 </div>
 <div aria-hidden="true" aria-labelledby="feedback" class="modal fade" id="feedbackModal" role="dialog" tabindex="-1">
 <div class="modal-dialog feedback-modal modal-dialog-centered" role="document">
@@ -2910,36 +1859,33 @@
 <div class="rating-options mb-2" id="rating-options">
 <div class="rating-options-buttons" style="grid-template-columns: repeat(5, minmax(0px, 1fr));">
 <button class="ratings-number question-2-rating-1 auto-text-color" type="submit" value="0.2">
-                          1
+                            1
                         </button>
 <button class="ratings-number question-2-rating-2 auto-text-color" type="submit" value="0.4">
-                          2
+                            2
                         </button>
 <button class="ratings-number question-2-rating-3 auto-text-color" type="submit" value="0.6">
-                          3
+                            3
                         </button>
 <button class="ratings-number question-2-rating-4 auto-text-color" type="submit" value="0.8">
-                          4
+                            4
                         </button>
 <button class="ratings-number question-2-rating-5 auto-text-color" type="submit" value="1">
-                          5
+                            5
                         </button>
 </div>
 </div>
 <label class="text-muted text-xs" for="long-feedback">How can we make it better?</label>
-<textarea class="long-feedback form-control mb-2" id="long-feedback"></textarea>
-</div>
+<textarea class="long-feedback form-control mb-2" id="long-feedback"></textarea></div>
 <div class="modal-footer">
 <button class="submit-feedback-btn disabled btn btn-primary btn-sm" data-dismiss="modal" type="button">
-                      Submit
-                    </button>
+                    Submit
+                </button>
 </div>
 </div>
 </div>
-</div>
-<div class="user-contributions" data-date="2025-02-19 14:41:15.274401">
-</div>
-<div class="dropdown">
+</div><div class="user-contributions" data-date="2025-03-24 18:15:54.293929">
+</div><div class="dropdown">
 <div aria-expanded="false" aria-label="Wiki Option Button" class="dropdown-toggle wiki-options menu" data-toggle="dropdown" id="wikiOptionsButton" role="button" type="button">
 <svg class="feather feather-more-horizontal" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
 <circle cx="5" cy="12" r="1"></circle>
@@ -2948,24 +1894,24 @@
 </svg>
 </div>
 <div aria-labelledby="wikiOptionsButton" class="dropdown-menu d-print-none">
-<a class="dropdown-item edit-wiki-btn" href="erpnext/v13/user/manual/de.html#">Edit Page</a>
-<a class="dropdown-item add-wiki-btn" href="erpnext/v13/user/manual/de.html#">New Page</a>
-<a class="dropdown-item show-revisions" data-target="#revisionsModal" data-toggle="modal" href="erpnext/v13/user/manual/de.html#">
-                  Revisions
-                </a>
-<a class="dropdown-item show-page-settings" data-target="#pageSettingsModal" data-toggle="modal" href="erpnext/v13/user/manual/de.html#">
-                  Page Settings
-                </a>
+<a class="dropdown-item edit-wiki-btn" href="wiki.html#">Edit Page</a>
+<a class="dropdown-item add-wiki-btn" href="wiki.html#">New Page</a>
+<a class="dropdown-item show-revisions" data-target="#revisionsModal" data-toggle="modal" href="wiki.html#">
+				Revisions
+			</a>
+<a class="dropdown-item show-page-settings" data-target="#pageSettingsModal" data-toggle="modal" href="wiki.html#">
+				Page Settings
+			</a>
 </div>
 </div>
 </div>
 <div class="wiki-footer d-print-none">
 <div class="forward-back">
-<a class="btn left footer-prev-page-link" href="erpnext/v13/user/manual/de.html#">
+<a class="btn left footer-prev-page-link" href="wiki.html#">
 <p>Previous Page</p>
 <p class="footer-prev-page">Left</p>
 </a>
-<a class="btn pull-right right footer-next-page-link" href="erpnext/v13/user/manual/de.html#">
+<a class="btn pull-right right footer-next-page-link" href="wiki.html#">
 <p>Next Page</p>
 <p class="footer-next-page">Right</p>
 </a>
@@ -2973,16 +1919,15 @@
 </div>
 </div>
 <script src="assets/frappe/js/lib/jquery/jquery.min.js" type="text/javascript"></script>
-<!--<script>
+<script>
 	/** // const patchNewCode = `<h1>{{ patch_new_title }}</h1>{{ patch_new_code }}`;
 	// const patchNewCode = {title: `{{ patch_new_title }}`, content: `{{ patch_new_code }}`} **/
 	const patchNewCode = `{{ patch_new_title }},{{ patch_new_code }}`
-	const wikiSearchScope = `erpnext`;
+	const wikiSearchScope = `wiki`;
 </script>
-
-<script type="text/javascript" src="assets/wiki/dist/js/wiki.bundle.WQQQOK77.js"></script>-->
-<!--<script>
-	var wikiPageName = `c17dfiqg98`;
+<script src="assets/wiki/dist/js/wiki.bundle.WQQQOK77.js" type="text/javascript"></script>
+<script>
+	var wikiPageName = `1sucq3ulq7`;
 	function getSidebarItems() {
 		let side = {};
 
@@ -3012,11 +1957,312 @@
 
 	const render_wiki = new RenderWiki();
 	frappe.ready(() => render_wiki.setup_search(wikiSearchScope))
-</script><script>{ { script } }</script>-->
-</main>
+</script><script>{ { script } }</script></main>
+</div>
+</div>
+<!-- 2 if blocks to avoid the toc jerking thing on reload -->
+<div class="page-toc d-none d-xl-block">
+<p class="page-toc-title">On this page</p>
+<div class="list-unstyled">
+<ul>
+<li><a href="wiki.html#introduction" style="padding-left: 1rem">Introduction</a></li><li><a href="wiki.html#what-is-wiki" style="padding-left: 2rem">What is Wiki?</a></li><li><a href="wiki.html#why-wiki" style="padding-left: 2rem">Why Wiki?</a></li><li><a href="wiki.html#key-features" style="padding-left: 2rem">Key Features</a></li><li><a href="wiki.html#under-the-hood" style="padding-left: 2rem">Under the Hood</a></li><li><a href="wiki.html#installation" style="padding-left: 2rem">Installation</a></li><li><a href="wiki.html#learning-and-community" style="padding-left: 2rem">Learning and community</a></li>
+</ul>
+</div>
+</div>
+<div class="contributions-view d-none">
+<div class="d-flex justify-content-between align-items-center mb-4">
+<span class="page-title">Review Changes</span>
+<a class="back-to-content">← Back to Content</a>
+</div>
+<input autocomplete="off" class="d-none" name="limit" type="text" value="0"/>
+<div class="frappe-card">
+<div class="table-area all-contributions">
+<div class="list-jobs table-responsive">
+<table class="table">
+<thead class="white">
+<tr>
+<td class="message-col">Message</td>
+<td class="status-col">Status</td>
+<td class="space-col">Space</td>
+<td class="raised-by-col">Raised By</td>
+<td class="date-col">Last update on</td>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
 </div>
 </div>
 </div>
-<script src="/assets/js/docsloader.js" type="text/javascript"></script>
+<div class="pagination-container">
+<button class="btn pull-right get_patches d-none">Load More</button>
+</div>
+<br/>
+<br/>
+</div>
+<script>
+		$(document).ready(function () {
+			// Toggle between content and contributions view
+			$('.review-changes-btn').on('click', function () {
+				$('.doc-main').addClass('d-none');
+				$('.page-toc').removeClass('d-xl-block');
+				$('.contributions-view').removeClass('d-none');
+				let wiki_space_name = "1suc0g2d25";
+				loadContributions(wiki_space_name);
+			});
+
+			$('.back-to-content').on('click', function () {
+				$('.contributions-view').addClass('d-none');
+				$('.doc-main').removeClass('d-none');
+				$('.page-toc').addClass('d-xl-block');
+			});
+
+			// Handle patch row click
+			$(document).on('click', '.patch-row', function () {
+				const patchName = $(this).data('patch');
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.get_patch_diff",
+					args: { patch: patchName },
+					callback: function (r) {
+						if (r.message) {
+							$('#patchDiffModal').modal('show');
+							$('.diff-content').html(r.message.diff);
+							$('.preview-content').html(r.message.merged_html);
+							$('.patch-info').html(`<b>${r.message.raised_by}</b> submitted changes <b>${r.message.raised_on}</b>`);
+						}
+					}
+				});
+			});
+
+			// Handle view toggle
+			$('.view-toggle-buttons .btn').on('click', function () {
+				$('.view-toggle-buttons .btn').removeClass('active');
+				$(this).addClass('active');
+
+				if ($(this).hasClass('view-raw')) {
+					$('.diff-content').addClass('active');
+					$('.preview-content').removeClass('active');
+				} else {
+					$('.preview-content').addClass('active');
+					$('.diff-content').removeClass('active');
+					hljs.highlightAll();
+				}
+			});
+
+			$('.approve-patch').on('click', function () {
+				let wiki_space_name = "1suc0g2d25";
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.update_patch_status",
+					args: {
+						patch: $('.patch-row').data('patch'),
+						status: "Approved"
+					},
+					callback: function (r) {
+						if (r.message) {
+							frappe.show_alert({ message: __("Patch approved successfully"), indicator: 'green' });
+							loadContributions(wiki_space_name);
+						}
+					}
+				});
+				$('#patchDiffModal').modal('hide');
+			});
+
+			$('.reject-patch').on('click', function () {
+				let wiki_space_name = "1suc0g2d25";
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.update_patch_status",
+					args: {
+						patch: $('.patch-row').data('patch'),
+						status: "Rejected"
+					},
+					callback: function (r) {
+						if (r.message) {
+							frappe.show_alert({ message: __("Patch rejected successfully"), indicator: 'red' });
+							loadContributions(wiki_space_name);
+						}
+					}
+				});
+				$('#patchDiffModal').modal('hide');
+			});
+
+			// Load contributions data
+			function loadContributions(space) {
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.get_patches_api",
+					args: {
+						start: 0,
+						limit: 10,
+						space: space
+					},
+					callback: function (response) {
+						if (response.message && response.message.patches) {
+							const tbody = $('.all-contributions tbody');
+							tbody.empty();
+
+							response.message.patches.forEach(function (patch) {
+								tbody.append(`
+                                <tr class="patch-row" data-patch="${patch.name}">
+                                    <td class="message-cell" title="${patch.message}">${patch.message}</td>
+                                    <td class="worker-name" title="${patch.status}">
+                                        <span class="indicator-pill no-margin ${patch.color}">&nbsp;&nbsp;${patch.status}</span>
+                                    </td>
+                                    <td class="space-cell" title="${patch.space_name}">${patch.space_name}</td>
+                                    <td class="raised-by-cell" title="${patch.raised_by}">${patch.raised_by}</td>
+                                    <td class="date-cell" title="${patch.modified}">${patch.modified}</td>
+                                </tr>
+                            `);
+							});
+
+							// Update limit input and manage 'More' button visibility
+							$('[name="limit"]').val(response.message.patches.length);
+							if (response.message.patches.length >= 10) {
+								$('.get_patches').removeClass('d-none');
+							} else {
+								$('.get_patches').addClass('d-none');
+							}
+						}
+					}
+				});
+			}
+
+			// Handle space filter change
+			$('#space-filter').on('change', function () {
+				loadContributions($(this).val());
+			});
+
+			// Handle 'More' button click to load more contributions
+			$('.get_patches').on("click", function () {
+				const currentSpace = $('#space-filter').val() || "";
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.get_patches_api",
+					args: {
+						start: parseInt($('[name="limit"]').val()),
+						limit: 10,
+						space: currentSpace
+					},
+					callback: function (response) {
+						if (response.message && response.message.patches) {
+							for (const patch of response.message.patches) {
+								$('.all-contributions tbody').append(`
+									<tr class="patch-row" data-patch="${patch.name}">
+										<td class="message-cell" title="${patch.message}">${patch.message}</td>
+										<td class="worker-name" title="${patch.status}">
+											<span class="indicator-pill no-margin ${patch.color}">&nbsp;&nbsp;${patch.status}</span>
+										</td>
+										<td class="space-cell" title="${patch.space_name}">${patch.space_name}</td>
+										<td class="raised-by-cell" title="${patch.raised_by}">${patch.raised_by}</td>
+										<td class="date-cell" title="${patch.modified}">${patch.modified}</td>
+									</tr>
+								`);
+							}
+
+							// Update limit value and manage 'More' button visibility
+							$('[name="limit"]').val(parseInt($('[name="limit"]').val()) + response.message.patches.length);
+							if (response.message.patches.length < 10) {
+								$('.get_patches').addClass('d-none');
+							}
+						}
+					},
+					freeze: true
+				});
+			});
+
+			// Handle patch row click
+			$(document).on('click', '.patch-row', function () {
+				const patchName = $(this).data('patch');
+				frappe.call({
+					method: "wiki.wiki.doctype.wiki_page.review_contributions.get_patch_diff",
+					args: { patch: patchName },
+					callback: function (r) {
+						if (r.message) {
+							$('#patchDiffModal').modal('show');
+							$('.diff-content').html(r.message.diff);
+							$('.preview-content').html(r.message.merged_html);
+							$('.patch-info').html(`<b>${r.message.raised_by}</b> submitted changes <b>${r.message.raised_on}</b>`);
+						}
+					}
+				});
+			});
+		});
+	</script>
+</div>
+<!-- js should be loaded in body! -->
+<script>
+		frappe.boot = {
+ "apps_data": {
+  "apps": [],
+  "default_path": "",
+  "is_desk_apps": 1
+ },
+ "assets_json": {
+  "billing.bundle.js": "/assets/frappe/dist/js/billing.bundle.QKWL3DBH.js",
+  "bootstrap-4-web.bundle.js": "/assets/frappe/dist/js/bootstrap-4-web.bundle.FOZOVELL.js",
+  "build_events.bundle.js": "/assets/frappe/dist/js/build_events.bundle.BCX32TWL.js",
+  "calendar.bundle.js": "/assets/frappe/dist/js/calendar.bundle.4A4YITIU.js",
+  "contributions.bundle.css": "/assets/wiki/dist/css/contributions.bundle.V5SJOPBZ.css",
+  "controls.bundle.js": "/assets/frappe/dist/js/controls.bundle.SW2VYA2N.js",
+  "data_import_tools.bundle.js": "/assets/frappe/dist/js/data_import_tools.bundle.Q5YT4XP2.js",
+  "desk.bundle.css": "/assets/frappe/dist/css/desk.bundle.3RNBZGNM.css",
+  "desk.bundle.js": "/assets/frappe/dist/js/desk.bundle.PSRFWQQG.js",
+  "dialog.bundle.js": "/assets/frappe/dist/js/dialog.bundle.NBJCI2WV.js",
+  "email.bundle.css": "/assets/frappe/dist/css/email.bundle.7Y67M3VC.css",
+  "file_uploader.bundle.js": "/assets/frappe/dist/js/file_uploader.bundle.QQ4TBKF5.js",
+  "form.bundle.js": "/assets/frappe/dist/js/form.bundle.DPQKBSIB.js",
+  "form_builder.bundle.js": "/assets/frappe/dist/js/form_builder.bundle.NRPX4YQU.js",
+  "frappe-web.bundle.js": "/assets/frappe/dist/js/frappe-web.bundle.JBX5EWER.js",
+  "kanban_board.bundle.js": "/assets/frappe/dist/js/kanban_board.bundle.F6FPXXED.js",
+  "libs.bundle.js": "/assets/frappe/dist/js/libs.bundle.TIV7ZGVY.js",
+  "list.bundle.js": "/assets/frappe/dist/js/list.bundle.H4MKMV64.js",
+  "login.bundle.css": "/assets/frappe/dist/css/login.bundle.4MS4DR47.css",
+  "logtypes.bundle.js": "/assets/frappe/dist/js/logtypes.bundle.5KO3ZOOI.js",
+  "onboarding_tours.bundle.js": "/assets/frappe/dist/js/onboarding_tours.bundle.RAUR6X4Z.js",
+  "photoswipe.bundle.js": "/assets/frappe/dist/js/photoswipe.bundle.YSXZQA64.js",
+  "print.bundle.css": "/assets/frappe/dist/css/print.bundle.PHBHDJN6.css",
+  "print_format.bundle.css": "/assets/frappe/dist/css/print_format.bundle.IGZW5HSX.css",
+  "print_format_builder.bundle.js": "/assets/frappe/dist/js/print_format_builder.bundle.VQYWNAGA.js",
+  "report.bundle.css": "/assets/frappe/dist/css/report.bundle.4AGBPYDB.css",
+  "report.bundle.js": "/assets/frappe/dist/js/report.bundle.QQAM6CVL.js",
+  "rtl_contributions.bundle.css": "/assets/wiki/dist/css-rtl/contributions.bundle.2DC3OMYN.css",
+  "rtl_desk.bundle.css": "/assets/frappe/dist/css-rtl/desk.bundle.ACSWXTZE.css",
+  "rtl_email.bundle.css": "/assets/frappe/dist/css-rtl/email.bundle.6WX2NYI7.css",
+  "rtl_login.bundle.css": "/assets/frappe/dist/css-rtl/login.bundle.ZTIRCNDY.css",
+  "rtl_print.bundle.css": "/assets/frappe/dist/css-rtl/print.bundle.BIV7ZRH4.css",
+  "rtl_print_format.bundle.css": "/assets/frappe/dist/css-rtl/print_format.bundle.ZOVH5V6L.css",
+  "rtl_report.bundle.css": "/assets/frappe/dist/css-rtl/report.bundle.J33LHVZX.css",
+  "rtl_web_form.bundle.css": "/assets/frappe/dist/css-rtl/web_form.bundle.WKLZIE2K.css",
+  "rtl_website.bundle.css": "/assets/frappe/dist/css-rtl/website.bundle.AC5ZDGYD.css",
+  "rtl_wiki.bundle.css": "/assets/wiki/dist/css-rtl/wiki.bundle.5ABKTQTC.css",
+  "sentry.bundle.js": "/assets/frappe/dist/js/sentry.bundle.AX44GVWW.js",
+  "telemetry.bundle.js": "/assets/frappe/dist/js/telemetry.bundle.LKEZCADB.js",
+  "user_profile_controller.bundle.js": "/assets/frappe/dist/js/user_profile_controller.bundle.TPZWXYWN.js",
+  "video_player.bundle.js": "/assets/frappe/dist/js/video_player.bundle.DUYYLSFO.js",
+  "web_form.bundle.css": "/assets/frappe/dist/css/web_form.bundle.QBM6ZZOR.css",
+  "web_form.bundle.js": "/assets/frappe/dist/js/web_form.bundle.GZWC6LDP.js",
+  "website.bundle.css": "/assets/frappe/dist/css/website.bundle.RHGQXNFY.css",
+  "wiki.bundle.css": "/assets/wiki/dist/css/wiki.bundle.62WRFBMX.css",
+  "wiki.bundle.js": "/assets/wiki/dist/js/wiki.bundle.WQQQOK77.js",
+  "workflow_builder.bundle.js": "/assets/frappe/dist/js/workflow_builder.bundle.MPAFFZ3D.js"
+ },
+ "is_fc_site": 0,
+ "lang": "en",
+ "sitename": "frappedocs.frappe.cloud",
+ "sysdefaults": {
+  "currency": "INR",
+  "date_format": "dd-mm-yyyy",
+  "first_day_of_the_week": "Sunday",
+  "float_precision": 3,
+  "number_format": "#,##,###.##",
+  "time_format": "HH:mm:ss"
+ },
+ "time_zone": {
+  "system": "Asia/Kolkata",
+  "user": "Asia/Kolkata"
+ }
+}
+		// for backward compatibility of some libs
+		frappe.sys_defaults = frappe.boot.sysdefaults;
+	</script>
+<script src="assets/frappe/dist/js/frappe-web.bundle.JBX5EWER.js" type="text/javascript"></script>
+<script src="website_script.js" type="text/javascript"></script>
+<script>frappe.csrf_token = "None";</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </body>
 </html>
