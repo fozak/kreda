@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Color Palette</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      background-color: #f9f9ff;
+      color: #2F2451;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1, h2 {
+      color: #7C5CFA;
+      margin-bottom: 20px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    
+    .color-box {
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .color-info {
+      background-color: rgba(255,255,255,0.85);
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    
+    .brand-text-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    
+    .brand-text-item {
+      padding: 18px 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: relative;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .brand-text-item:after {
+      content: attr(data-hex);
+      position: absolute;
+      bottom: 5px;
+      right: 8px;
+      font-size: 10px;
+      opacity: 0.7;
+      padding: 2px 4px;
+      border-radius: 3px;
+      background-color: #f5f5f5;
+      color: #555;
+    }
+    
+    .main-purples {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .main-purple {
+      flex: 1;
+      height: 120px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      padding: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    
+    .accent-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 15px;
+    }
+    
+    .accent-color {
+      height: 70px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Brand Color Palette</h1>
+  
+  <div class="section">
+    <h2>Main Purple</h2>
+    <div class="main-purples">
+      <div class="main-purple" style="background-color: #7C5CFA;">
+        <div class="color-info">
+          Primary Purple<br>#7C5CFA
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Purple Tints & Shades</h2>
+    <div class="color-grid">
+      <div class="color-box" style="background-color: #E2DFFF;">
+        <div class="color-info">
+          Lightest Tint<br>#E2DFFF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #C3B9FF;">
+        <div class="color-info">
+          Light Tint<br>#C3B9FF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #A390FF;">
+        <div class="color-info">
+          Medium Tint<br>#A390FF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #7C5CFA;">
+        <div class="color-info">
+          Primary Purple<br>#7C5CFA
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #2F2451;">
+        <div class="color-info" style="color: white;">
+          Deep Shade<br>#2F2451
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Brand Text Colors</h2>
+    <p>Each product name uses a distinct color in a logical progression around the color wheel.</p>
+    <div class="brand-text-grid">
+      <div class="brand-text-item" style="color: #7C5CFA;" data-hex="#7C5CFA">COWORKER</div>
+      <div class="brand-text-item" style="color: #6B4FFF;" data-hex="#6B4FFF">BUSINESS MANAGEMENT</div>
+      <div class="brand-text-item" style="color: #8A4FE5;" data-hex="#8A4FE5">AI COWORKER</div>
+      <div class="brand-text-item" style="color: #9B4FCA;" data-hex="#9B4FCA">PEOPLE</div>
+      <div class="brand-text-item" style="color: #B04FAF;" data-hex="#B04FAF">SALES</div>
+      <div class="brand-text-item" style="color: #C24F94;" data-hex="#C24F94">MARKETING</div>
+      <div class="brand-text-item" style="color: #D84F7A;" data-hex="#D84F7A">FINANCE</div>
+      <div class="brand-text-item" style="color: #F8579D;" data-hex="#F8579D">SERVICE</div>
+      <div class="brand-text-item" style="color: #F35F77;" data-hex="#F35F77">PROJECTS</div>
+      <div class="brand-text-item" style="color: #F37659;" data-hex="#F37659">WAREHOUSE</div>
+      <div class="brand-text-item" style="color: #F39C59;" data-hex="#F39C59">ASSETS</div>
+      <div class="brand-text-item" style="color: #DFC055;" data-hex="#DFC055">MANUFACTURING</div>
+      <div class="brand-text-item" style="color: #A5CF55;" data-hex="#A5CF55">QUALITY</div>
+      <div class="brand-text-item" style="color: #72D36C;" data-hex="#72D36C">TEAM</div>
+      <div class="brand-text-item" style="color: #59E1C7;" data-hex="#59E1C7">EDUCATION</div>
+      <div class="brand-text-item" style="color: #5FC8F3;" data-hex="#5FC8F3">FRAMEWORK</div>
+      <div class="brand-text-item" style="color: #6E91FF;" data-hex="#6E91FF">AI BROWSER</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Expanded Accent Colors</h2>
+    <p>Additional accent colors in logical order following the same color progression.</p>
+    <div class="accent-grid">
+      <div class="accent-color" style="background-color: #7C5CFA;">
+        <div class="color-info">
+          Purple<br>#7C5CFA
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #6B4FFF;">
+        <div class="color-info">
+          Blue-Purple<br>#6B4FFF
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #8A4FE5;">
+        <div class="color-info">
+          Violet<br>#8A4FE5
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #9B4FCA;">
+        <div class="color-info">
+          Purple-Magenta<br>#9B4FCA
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #B04FAF;">
+        <div class="color-info">
+          Magenta<br>#B04FAF
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #C24F94;">
+        <div class="color-info">
+          Rose<br>#C24F94
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #D84F7A;">
+        <div class="color-info">
+          Pink-Red<br>#D84F7A
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #F8579D;">
+        <div class="color-info">
+          Pink<br>#F8579D
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #F35F77;">
+        <div class="color-info">
+          Coral<br>#F35F77
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #F37659;">
+        <div class="color-info">
+          Salmon<br>#F37659
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #F39C59;">
+        <div class="color-info">
+          Orange<br>#F39C59
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #DFC055;">
+        <div class="color-info">
+          Gold<br>#DFC055
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #A5CF55;">
+        <div class="color-info">
+          Lime<br>#A5CF55
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #72D36C;">
+        <div class="color-info">
+          Green<br>#72D36C
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #59E1C7;">
+        <div class="color-info">
+          Mint<br>#59E1C7
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #5FC8F3;">
+        <div class="color-info">
+          Sky Blue<br>#5FC8F3
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #6E91FF;">
+        <div class="color-info">
+          Blue<br>#6E91FF
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #5D5FE5;">
+        <div class="color-info">
+          Indigo<br>#5D5FE5
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #966AE2;">
+        <div class="color-info">
+          Lavender<br>#966AE2
+        </div>
+      </div>
+      <div class="accent-color" style="background-color: #C5B9FF;">
+        <div class="color-info">
+          Light Purple<br>#C5B9FF
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Color Progression</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #7C5CFA; border-radius: 4px;"></div>
+        <span>Purple (Main)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #B04FAF; border-radius: 4px;"></div>
+        <span>Purple → Pink</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #F8579D; border-radius: 4px;"></div>
+        <span>Pink</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #F37659; border-radius: 4px;"></div>
+        <span>Pink → Orange</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #DFC055; border-radius: 4px;"></div>
+        <span>Orange → Green</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #59E1C7; border-radius: 4px;"></div>
+        <span>Green → Blue</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <div style="width: 20px; height: 20px; background-color: #6E91FF; border-radius: 4px;"></div>
+        <span>Blue → Purple</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+</body>
+</html>

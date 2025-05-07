@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Color Palette</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      background-color: #f9f9ff;
+      color: #2F2451;
+    }
+    
+    h1, h2 {
+      color: #7C5CFA;
+      margin-bottom: 20px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    
+    .color-box {
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .color-info {
+      background-color: rgba(255,255,255,0.85);
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    
+    .brand-text-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    
+    .brand-text-item {
+      padding: 20px 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .main-purples {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .main-purple {
+      flex: 1;
+      height: 120px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      padding: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <h1>Brand Color Palette</h1>
+  
+  <div class="section">
+    <h2>Main Purples</h2>
+    <div class="main-purples">
+      <div class="main-purple" style="background-color: #7C5CFA;">
+        <div class="color-info">
+          Primary Purple<br>#7C5CFA
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Purple Tints & Shades</h2>
+    <div class="color-grid">
+      <div class="color-box" style="background-color: #E2DFFF;">
+        <div class="color-info">
+          Lightest Tint<br>#E2DFFF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #C3B9FF;">
+        <div class="color-info">
+          Light Tint<br>#C3B9FF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #A390FF;">
+        <div class="color-info">
+          Medium Tint<br>#A390FF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #7C5CFA;">
+        <div class="color-info">
+          Primary Purple<br>#7C5CFA
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #2F2451;">
+        <div class="color-info" style="color: white;">
+          Deep Shade<br>#2F2451
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Accent Colors</h2>
+    <div class="color-grid">
+      <div class="color-box" style="background-color: #59E1C7;">
+        <div class="color-info">
+          Mint Green<br>#59E1C7
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #D4B4FF;">
+        <div class="color-info">
+          Soft Lavender<br>#D4B4FF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #D88EBB;">
+        <div class="color-info">
+          Mauve<br>#D88EBB
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #5FC8F3;">
+        <div class="color-info">
+          Sky Blue<br>#5FC8F3
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #6B4FFF;">
+        <div class="color-info">
+          Deep Purple<br>#6B4FFF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #F8579D;">
+        <div class="color-info">
+          Pink<br>#F8579D
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #FFFFFF; border: 1px solid #eee;">
+        <div class="color-info">
+          White<br>#FFFFFF
+        </div>
+      </div>
+      <div class="color-box" style="background-color: #C5B9FF;">
+        <div class="color-info">
+          Lavender Tint<br>#C5B9FF
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Brand Text Colors</h2>
+    <p>These brand text colors follow a gradient that starts from the main purple and cycles back to it.</p>
+    <div class="brand-text-grid">
+      <div class="brand-text-item" style="background-color: #7C5CFA;">COWORKER</div>
+      <div class="brand-text-item" style="background-color: #6B4FFF;">BUSINESS MANAGEMENT</div>
+      <div class="brand-text-item" style="background-color: #5FC8F3;">AI COWORKER</div>
+      <div class="brand-text-item" style="background-color: #59E1C7;">PEOPLE</div>
+      <div class="brand-text-item" style="background-color: #59E1C7;">SALES</div>
+      <div class="brand-text-item" style="background-color: #5FC8F3;">MARKETING</div>
+      <div class="brand-text-item" style="background-color: #6B4FFF;">FINANCE</div>
+      <div class="brand-text-item" style="background-color: #7C5CFA;">SERVICE</div>
+      <div class="brand-text-item" style="background-color: #A390FF;">PROJECTS</div>
+      <div class="brand-text-item" style="background-color: #C3B9FF;">WAREHOUSE</div>
+      <div class="brand-text-item" style="background-color: #D4B4FF;">ASSETS</div>
+      <div class="brand-text-item" style="background-color: #D88EBB;">MANUFACTURING</div>
+      <div class="brand-text-item" style="background-color: #F8579D;">QUALITY</div>
+      <div class="brand-text-item" style="background-color: #D88EBB;">TEAM</div>
+      <div class="brand-text-item" style="background-color: #D4B4FF;">EDUCATION</div>
+      <div class="brand-text-item" style="background-color: #C3B9FF;">FRAMEWORK</div>
+      <div class="brand-text-item" style="background-color: #A390FF;">AI BROWSER</div>
+    </div>
+  </div>
+</body>
+</html>

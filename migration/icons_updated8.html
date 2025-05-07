@@ -539,6 +539,35 @@
       }
     });
   </script>
+  <script>
+    const colorMap = {
+      "COWORKER": "#7C5CFA",
+      "BUSINESS MANAGEMENT": "#6B4FFF",
+      "AI COWORKER": "#8A4FE5",
+      "PEOPLE": "#9B4FCA",
+      "SALES": "#B04FAF",
+      "MARKETING": "#C24F94",
+      "FINANCE": "#D84F7A",
+      "SERVICE": "#F8579D",
+      "PROJECTS": "#F35F77",
+      "WAREHOUSE": "#F37659",
+      "ASSETS": "#F39C59",
+      "MANUFACTURING": "#DFC055",
+      "QUALITY": "#A5CF55",
+      "TEAM": "#72D36C",
+      "EDUCATION": "#59E1C7",
+      "FRAMEWORK": "#5FC8F3",
+      "AI BROWSER": "#6E91FF"
+    };
+  
+    document.querySelectorAll(".icon-label").forEach(el => {
+      const label = el.textContent.trim();
+      if (colorMap[label]) {
+        el.style.color = colorMap[label];
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
