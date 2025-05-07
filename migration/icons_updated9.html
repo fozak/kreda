@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    Lucide Folder and Wallet Icons with Gradient
+  </title>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .icon-container {
+      display: flex;
+      flex-direction: row;
+      /* Place icon and labels side by side */
+      align-items: center;
+      /* Vertically center the content */
+      gap: 12px;
+      /* Space between icon and labels */
+      height: 150px;
+      /* Match the height of the icon */
+    }
+
+    .icon-visual {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      /* Fixed size for the icon */
+    }
+
+    .icon-labels {
+      display: flex;
+      flex-direction: column;
+      /* Stack labels vertically */
+      justify-content: center;
+      /* Center labels vertically */
+      gap: 0px;
+      /* was 4 Space between labels */
+      height: 100%;
+      /* Make the labels container fill the height of the icon block */
+    }
+
+    .coworker-icon-font {
+      font-size: 4rem;
+      /* Adjust size for prominence */
+      font-weight: 600;
+      /* Make it bold */
+      color: #757981;
+      /* Darker color */
+      text-align: left;
+      /* Left-align the text */
+      line-height: 0.8;
+      /* Reduced line height */
+      margin: 0;
+      /* Remove margin */
+      padding: 0;
+      /* Remove padding */
+      letter-spacing: -0.03em;
+      /* Tighten letter spacing */
+      /*transform: scaleX(0.95); /* Horizontally compress by 10% */
+      transform-origin: left;
+      /* Scale from left side */
+    }
+
+    .icon-label {
+      font-size: 4rem;
+      /* Define a consistent font size */
+      font-weight: 600;
+      /* Keep the original weight */
+      color: #7C5CFA;
+      /* CW color */
+      text-align: left;
+      /* Left-align the text */
+      line-height: 0.8;
+      /* Reduce vertical spacing inside the text */
+      margin: 0;
+      /* Eliminate any default margin */
+      padding: 0;
+      /* Eliminate any padding just in case */
+      margin-top: 17px;
+      letter-spacing: -0.03em;
+      /* Tighten letter spacing */
+      /*transform: scaleX(0.95); /* Horizontally compress by 10% */
+      transform-origin: left;
+      /* Scale from left side */
+    }
+
+    .icon-wrapper.outer {
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon-wrapper.outer .lucide {
+      width: 100%;
+      height: 100%;
+      fill: url(#icon-gradient);
+      stroke: url(#icon-gradient);
+      stroke-width: 1;
+    }
+
+    .icon-wrapper.inner {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .icon-wrapper.inner .lucide {
+      width: 100% !important;
+      height: 100% !important;
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+      filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.5));
+    }
+
+    .background-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: url(#icon-gradient);
+      opacity: 0.1;
+    }
+  </style>
+</head>
+
+<body>
+  <svg height="0" width="0">
+    <defs>
+      <linearGradient id="icon-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#7C5CFA" /> <!-- main colour  -->
+        <stop offset="60%" stop-color="#A894FB" /> <!-- lighter midpoint -->
+        <stop offset="100%" stop-color="#59E1C7" /> <!-- REPLACE THIS WITH CORRESPONDENT COLOUR -->
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="bg-white text-gray-800 p-6">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8">
+        Coworker 365 App Suite
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <!-- Repeat this block for each app -->
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <img alt="Coworker Icon" class="svg-icon" src="/assets/coworker-white.svg" />
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              COWORKER
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="briefcase">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              BUSINESS MANAGEMENT
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="users">
+              </i>
+              <!--changed to users-->
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              AI COWORKER
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="users">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              PEOPLE
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="handshake">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              SALES
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="megaphone">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              MARKETING
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="wallet">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              FINANCE
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="headset">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              SERVICE
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="clipboard-check">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              PROJECTS
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="package">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              WAREHOUSE
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="barcode">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              ASSETS
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="factory">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              MANUFACTURING
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="shield-check">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              QUALITY
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="message-square-text">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              TEAM
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="graduation-cap">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              EDUCATION
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="layers">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              FRAMEWORK
+            </div>
+          </div>
+        </div>
+        <div class="icon-container">
+          <div class="icon-visual">
+            <div class="background-circle">
+            </div>
+            <div class="icon-wrapper outer">
+              <i data-lucide="square">
+              </i>
+            </div>
+            <div class="icon-wrapper inner">
+              <i data-lucide="compass">
+              </i>
+            </div>
+          </div>
+          <div class="icon-labels">
+            <div class="coworker-icon-font">
+              COWORKER 365
+            </div>
+            <div class="icon-label">
+              AI BROWSER
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+
+  
+
+<script>
+  // Define your color mapping
+  const colorMap = {
+    "COWORKER": "#7C5CFA",
+    "BUSINESS MANAGEMENT": "#6B4FFF",
+    "AI COWORKER": "#8A4FE5",
+    "PEOPLE": "#9B4FCA",
+    "SALES": "#B04FAF",
+    "MARKETING": "#C24F94",
+    "FINANCE": "#D84F7A",
+    "SERVICE": "#F8579D",
+    "PROJECTS": "#F35F77",
+    "WAREHOUSE": "#F37659",
+    "ASSETS": "#F39C59",
+    "MANUFACTURING": "#DFC055",
+    "QUALITY": "#A5CF55",
+    "TEAM": "#72D36C",
+    "EDUCATION": "#59E1C7",
+    "FRAMEWORK": "#5FC8F3",
+    "AI BROWSER": "#6E91FF"
+  };
+
+  // Run this after Lucide icons are rendered
+  window.addEventListener("DOMContentLoaded", () => {
+    lucide.createIcons();
+
+    const svgDefs = document.querySelector("svg defs");
+
+    // Iterate through each icon-container
+    document.querySelectorAll(".icon-container").forEach((container, index) => {
+      const labelEl = container.querySelector(".icon-label");
+      const label = labelEl?.textContent.trim();
+      const endColor = colorMap[label];
+      if (!endColor) return;
+
+      // Create unique gradient ID
+      const gradientId = `icon-gradient-${index}`;
+
+      // Build gradient definition
+      const gradient = document.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
+      gradient.setAttribute("id", gradientId);
+      gradient.setAttribute("x1", "0%");
+      gradient.setAttribute("x2", "100%");
+      gradient.setAttribute("y1", "0%");
+      gradient.setAttribute("y2", "100%");
+
+      [
+        { offset: "0%", color: "#7C5CFA" },
+        { offset: "60%", color: "#A894FB" },
+        { offset: "100%", color: endColor }
+      ].forEach(stop => {
+        const stopEl = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+        stopEl.setAttribute("offset", stop.offset);
+        stopEl.setAttribute("stop-color", stop.color);
+        gradient.appendChild(stopEl);
+      });
+
+      // Append to <svg><defs>
+      svgDefs.appendChild(gradient);
+
+      // Find the <svg> that has the <rect> (inside the outer icon-wrapper)
+      const svg = container.querySelector(".icon-wrapper.outer svg");
+      const rect = svg?.querySelector("rect");
+
+      if (rect) {
+        rect.setAttribute("fill", `url(#${gradientId})`);
+      }
+    });
+  });
+
+
+
+  /*fonts */
+
+  document.querySelectorAll(".icon-label").forEach(el => {
+    const label = el.textContent.trim();
+    if (colorMap[label]) {
+      el.style.color = colorMap[label];
+    }
+  });
+</script>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+</body>
+
+</html>
