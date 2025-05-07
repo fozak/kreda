@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lucide Folder and Wallet Icons with Gradient</title>
+  <!-- Include Lucide icons library correctly -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    body {
+      background: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+    .icon-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .icon-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .icon-wrapper.small {
+      width: 60%;
+      height: 60%;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 2;
+    }
+    .icon-label {
+      margin-top: 12px;
+      font-size: 14px;
+      text-align: center;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke-width: 1.5;
+    }
+    .lucide {
+      stroke: url(#icon-gradient);
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff4f81" />
+        <stop offset="100%" stop-color="#8e5fff" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="icon-container">
+    <div class="icon-wrapper">
+      <i data-lucide="folder"></i>
+    </div>
+    <div class="icon-wrapper small">
+      <i data-lucide="folder"></i>
+    </div>
+    <div class="icon-label">Folder</div>
+  </div>
+
+  <div class="icon-container">
+    <div class="icon-wrapper">
+      <i data-lucide="wallet"></i>
+    </div>
+    <div class="icon-wrapper small">
+      <i data-lucide="wallet"></i>
+    </div>
+    <div class="icon-label">Wallet</div>
+  </div>
+
+  <div class="icon-container">
+    <div class="icon-wrapper">
+      <i data-lucide="square"></i>
+    </div>
+    <div class="icon-wrapper small">
+      <i data-lucide="wallet"></i>
+    </div>
+    <div class="icon-label">Wallet</div>
+  </div>
+  <script>
+    // Initialize Lucide icons after the DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if LucideIcons global is available and create the icons
+      if (typeof LucideIcons !== 'undefined') {
+        LucideIcons.createIcons();
+      } else if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      } else {
+        console.error('Lucide library not loaded properly');
+      }
+    });
+  </script>
+</body>
+</html>
