@@ -77,7 +77,7 @@
       height: 100%;
       fill: none;
       stroke: white;
-      stroke-width: 2;
+      stroke-width: 2.5;  /* was 2 */
       filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.5));
     }
     
@@ -135,7 +135,7 @@
         <div class="icon-visual">
           <div class="icon-square"></div>
           <div class="icon-inner">
-            <i data-lucide="briefcase"></i>
+            <img alt="Coworker Icon" src="/migration/coworker.svg" /><!---<i data-lucide="briefcase"></i>--->
           </div>
         </div>
         <div class="icon-labels">
@@ -422,8 +422,11 @@ document.querySelectorAll('.icon-label').forEach(element => {
     margin: '0',
     letterSpacing: '-0.05em',
     marginBottom: '0',
+    marginLeft: '20px',
   });
 });
+
+
 
 
   </script>
