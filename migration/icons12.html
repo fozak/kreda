@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <title>Coworker 365 App Suite</title>
@@ -12,7 +13,7 @@
       padding: 20px;
       background-color: #f4f4f4;
     }
-    
+
     .app-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -20,13 +21,13 @@
       padding: 24px;
       border-radius: 8px;
     }
-    
+
     .app-title {
       font-size: 1.875rem;
       font-weight: 700;
       margin-bottom: 32px;
     }
-    
+
     .icons-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -34,31 +35,32 @@
     }
 
     .grid-cols-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 50px; /* vertical spacing */
-}
-    
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      /* vertical spacing */
+    }
+
     .icon-container {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    
+
     .icon-visual {
       position: relative;
       width: 150px;
       height: 150px;
       flex-shrink: 0;
     }
-    
+
     .icon-square {
       position: absolute;
       width: 100%;
       height: 100%;
       border-radius: 20%;
     }
-    
+
     .icon-inner {
       position: absolute;
       width: 60%;
@@ -71,23 +73,26 @@
       align-items: center;
       justify-content: center;
     }
-    
-    .icon-inner svg, .icon-inner img {
+
+    .icon-inner svg,
+    .icon-inner img {
       width: 100%;
       height: 100%;
       fill: none;
       stroke: white;
-      stroke-width: 2.5;  /* was 2 */
+      stroke-width: 2.5;
+      /* was 2 */
       filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.5));
     }
-    
+
     .icon-labels {
       display: flex;
       flex-direction: column;
-      justify-content: center; /* vertically centers both elements */
+      justify-content: center;
+      /* vertically centers both elements */
       height: 150px;
     }
-    
+
     .coworker-icon-font {
       font-size: 5rem;
       font-weight: 600;
@@ -96,18 +101,22 @@
       line-height: 0.8;
       margin: 0;
       letter-spacing: -0.03em;
-      margin-top: 0;  /*was 10px*/
+      margin-top: 0;
+      /*was 10px*/
     }
-    
+
     .icon-label {
-      font-size: 6rem;   /* was 5rem */
+      font-size: 6rem;
+      /* was 5rem */
       font-weight: 600;
-      color: #2e2e2e; /* added NOT black */
+      color: #2e2e2e;
+      /* added NOT black */
       text-align: left;
       line-height: 0.8;
       margin: 0;
       letter-spacing: -0.03em;
-      margin-bottom: 0; /*was 10px*/
+      margin-bottom: 0;
+      /*was 10px*/
     }
   </style>
 </head>
@@ -126,16 +135,16 @@
         </div>
         <div class="icon-labels">
           <div class="coworker-icon-font">COWORKER 365</div>
-          <div class="icon-label">COWORKER</div>
+          <div class="icon-label">COWORKER 365</div>
         </div>
       </div>
-      
+
       <!-- Business Management -->
       <div class="icon-container" data-app="BUSINESS MANAGEMENT">
         <div class="icon-visual">
           <div class="icon-square"></div>
           <div class="icon-inner">
-            <img alt="Coworker Icon" src="/migration/coworker.svg" /><!---<i data-lucide="briefcase"></i>--->
+            <i data-lucide="bold"></i>
           </div>
         </div>
         <div class="icon-labels">
@@ -143,7 +152,7 @@
           <div class="icon-label">BUSINESS MANAGEMENT</div>
         </div>
       </div>
-      
+
       <!-- AI Coworker -->
       <div class="icon-container" data-app="AI COWORKER">
         <div class="icon-visual">
@@ -157,13 +166,13 @@
           <div class="icon-label">AI COWORKER</div>
         </div>
       </div>
-      
+
       <!-- People -->
       <div class="icon-container" data-app="PEOPLE">
         <div class="icon-visual">
           <div class="icon-square"></div>
           <div class="icon-inner">
-            <i data-lucide="users"></i>
+            <i data-lucide="users-round"></i>
           </div>
         </div>
         <div class="icon-labels">
@@ -171,7 +180,7 @@
           <div class="icon-label">PEOPLE</div>
         </div>
       </div>
-      
+
       <!-- Sales -->
       <div class="icon-container" data-app="SALES">
         <div class="icon-visual">
@@ -185,7 +194,7 @@
           <div class="icon-label">SALES</div>
         </div>
       </div>
-      
+
       <!-- Marketing -->
       <div class="icon-container" data-app="MARKETING">
         <div class="icon-visual">
@@ -199,7 +208,7 @@
           <div class="icon-label">MARKETING</div>
         </div>
       </div>
-      
+
       <!-- Finance -->
       <div class="icon-container" data-app="FINANCE">
         <div class="icon-visual">
@@ -213,7 +222,7 @@
           <div class="icon-label">FINANCE</div>
         </div>
       </div>
-      
+
       <!-- Service -->
       <div class="icon-container" data-app="SERVICE">
         <div class="icon-visual">
@@ -227,7 +236,7 @@
           <div class="icon-label">SERVICE</div>
         </div>
       </div>
-      
+
       <!-- Projects -->
       <div class="icon-container" data-app="PROJECTS">
         <div class="icon-visual">
@@ -241,7 +250,7 @@
           <div class="icon-label">PROJECTS</div>
         </div>
       </div>
-      
+
       <!-- Warehouse -->
       <div class="icon-container" data-app="WAREHOUSE">
         <div class="icon-visual">
@@ -255,7 +264,7 @@
           <div class="icon-label">WAREHOUSE</div>
         </div>
       </div>
-      
+
       <!-- Assets -->
       <div class="icon-container" data-app="ASSETS">
         <div class="icon-visual">
@@ -269,7 +278,7 @@
           <div class="icon-label">ASSETS</div>
         </div>
       </div>
-      
+
       <!-- Manufacturing -->
       <div class="icon-container" data-app="MANUFACTURING">
         <div class="icon-visual">
@@ -283,7 +292,7 @@
           <div class="icon-label">MANUFACTURING</div>
         </div>
       </div>
-      
+
       <!-- Quality -->
       <div class="icon-container" data-app="QUALITY">
         <div class="icon-visual">
@@ -297,7 +306,7 @@
           <div class="icon-label">QUALITY</div>
         </div>
       </div>
-      
+
       <!-- Team -->
       <div class="icon-container" data-app="TEAM">
         <div class="icon-visual">
@@ -311,7 +320,7 @@
           <div class="icon-label">TEAM</div>
         </div>
       </div>
-      
+
       <!-- Education -->
       <div class="icon-container" data-app="EDUCATION">
         <div class="icon-visual">
@@ -325,7 +334,7 @@
           <div class="icon-label">EDUCATION</div>
         </div>
       </div>
-      
+
       <!-- Framework -->
       <div class="icon-container" data-app="FRAMEWORK">
         <div class="icon-visual">
@@ -339,7 +348,7 @@
           <div class="icon-label">FRAMEWORK</div>
         </div>
       </div>
-      
+
       <!-- AI Browser -->
       <div class="icon-container" data-app="AI BROWSER">
         <div class="icon-visual">
@@ -379,58 +388,57 @@
     };
 
     // Apply styles when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Initialize Lucide icons
       lucide.createIcons();
-      
+
       // Apply colors and gradients to each icon
       document.querySelectorAll('.icon-container').forEach(container => {
         const appName = container.getAttribute('data-app');
         const endColor = colorMap[appName];
-        
+
         if (endColor) {
           // Set gradient on square background
           const square = container.querySelector('.icon-square');
           square.style.background = `linear-gradient(135deg, ${endColor} 0%, ${endColor} 60%, ${endColor} 100%)`;   //was #7C5CFA 0% #A894FB 60% ${endColor} 100%
-          
+
           // Set text color
           //const label = container.querySelector('.icon-label');
           //label.style.color = endColor;
         }
       });
     });
-//removing coworker 365 text
+    //removing coworker 365 text
     document.querySelectorAll('.coworker-icon-font').forEach(el => {
-  if (el.textContent.trim() === 'COWORKER 365') {
-    el.remove();
-  }
-});
+      if (el.textContent.trim() === 'COWORKER 365') {
+        el.remove();
+      }
+    });
 
 
-//capitalizing icon labels
-document.querySelectorAll('.icon-label').forEach(el => {
-  el.textContent = el.textContent.trim().toLowerCase().replace(/^./, c => c.toUpperCase());
-});
-//apply styles to icon labels
-document.querySelectorAll('.icon-label').forEach(element => {
-  Object.assign(element.style, {
-    fontSize: '6rem',
-    fontWeight: '700',
-    color: '#2e2e2e',
-    textAlign: 'left',
-    lineHeight: '0.7',
-    margin: '0',
-    letterSpacing: '-0.05em',
-    marginBottom: '0',
-    marginLeft: '20px',
-  });
-});
+    //capitalizing icon labels
+    document.querySelectorAll('.icon-label').forEach(el => {
+      el.textContent = el.textContent.trim().toLowerCase().replace(/^./, c => c.toUpperCase());
+    });
+    //apply styles to icon labels
+    document.querySelectorAll('.icon-label').forEach(element => {
+      Object.assign(element.style, {
+        fontSize: '6rem',
+        fontWeight: '700',
+        color: '#2e2e2e',
+        textAlign: 'left',
+        lineHeight: '0.7',
+        margin: '0',
+        letterSpacing: '-0.05em',
+        marginBottom: '0',
+        marginLeft: '20px',
+      });
+    });
 
 
 
 
   </script>
 </body>
+
 </html>
-
-
