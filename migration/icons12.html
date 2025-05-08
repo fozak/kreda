@@ -391,7 +391,7 @@
         if (endColor) {
           // Set gradient on square background
           const square = container.querySelector('.icon-square');
-          square.style.background = `linear-gradient(135deg, #7C5CFA 0%, #A894FB 60%, ${endColor} 100%)`;
+          square.style.background = `linear-gradient(135deg, ${endColor} 0%, ${endColor} 60%, ${endColor} 100%)`;   //was #7C5CFA 0% #A894FB 60% ${endColor} 100%
           
           // Set text color
           //const label = container.querySelector('.icon-label');
