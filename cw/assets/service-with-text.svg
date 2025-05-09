@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253 24" fill="none">
+  
+  <!-- Background rectangle with no stroke -->
+  <rect xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="24" height="24" rx="4" ry="4" fill="rgb(248, 87, 157)"/>
+  <!-- Icon (headset) centered using proper calculation -->
+  <g xmlns="http://www.w3.org/2000/svg" transform="translate(12, 12) translate(-8, -8) scale(0.65)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+    <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+  </g>
+
+  
+    <text x="30" y="1" alignment-baseline="hanging" font-family="Inter, sans-serif"
+          font-size="20" font-weight="800" fill="rgb(46, 46, 46)" letter-spacing="-0.07em">
+      Service
+    </text>
+</svg>

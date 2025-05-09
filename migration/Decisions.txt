@@ -1,0 +1,14 @@
+Made decisions
+- Visual brand is defined
+- font INTER
+- product names are fixed including "Business Management"
+- added new name Platform
+- version 1 of branding - no ^ cover over icons (in the future we may add it). 
+
+
+
+
+Not made
+- main color seems week
+- 
+- Main product is not defined - Business Management, Business Platform, Platform
