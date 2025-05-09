@@ -1,4 +1,4 @@
-  document.addEventListener("DOMContentLoaded", function () {
+  
     document.querySelectorAll('[data-loader]').forEach(function (el) {
       const loaderName = el.getAttribute('data-loader');
       const filePath = `/components/${loaderName}.html`;
@@ -16,4 +16,4 @@
           el.innerHTML = `<div style="color:red;">Error loading ${filePath}</div>`;
         });
     });
-  });
+
