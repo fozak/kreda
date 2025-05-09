@@ -27,7 +27,321 @@
     <script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
     <link type="text/css" rel="stylesheet" href="/assets/css/combined_docs_styles.css">
 
-    <!---fonts-->
+    <style>
+        .fb-4e38dc47 {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .fb-d1bfaf41 {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+            height: fit-content;
+            padding-bottom: 64px;
+            padding-left: 0;
+            padding-right: 0px;
+            padding-top: 64px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            .fb-d1bfaf41 {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-d1bfaf41 {
+                gap: 48px;
+                padding-top: 36px;
+            }
+        }
+
+        .fb-c0926173 {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            height: fit-content;
+            justify-content: flex-start;
+            width: fit-content;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-c0926173 {
+                margin-bottom: 0px;
+            }
+        }
+
+        .fb-0feda8db {
+            color: #7C7C7C;
+            font-size: 11px;
+            font-weight: 600;
+            height: fit-content;
+            letter-spacing: 0.99px;
+            line-height: 115%;
+            min-width: 30px;
+            width: fit-content;
+            display: none;
+        }
+
+        .fb-0feda8db {
+            text-transform: uppercase;
+        }
+
+        .fb-cb75eb86 {
+            color: var(--gray-900, #171717);
+            font-family: Newsreader;
+            font-size: 32px;
+            font-weight: 500;
+            height: fit-content;
+            left: auto;
+            line-height: 130%;
+            min-width: 30px;
+            position: static;
+            top: auto;
+            width: fit-content;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-cb75eb86 {
+                font-size: 28px;
+                max-width: 300px;
+            }
+        }
+
+        .fb-103549f3 {
+            font-size: 16px;
+            width: fit-content;
+            height: fit-content;
+            line-height: 167%;
+            min-width: 10px;
+            letter-spacing: 0.3px;
+            font-weight: 420;
+            color: #7c7c7c;
+        }
+
+        .fb-5c5c7ea7 {
+            align-items: flex-start;
+            display: grid;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: flex-start;
+            position: static;
+            width: 100%;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+        }
+
+        @media only screen and (max-width: 1023px) {
+            .fb-5c5c7ea7 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                grid-auto-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-5c5c7ea7 {
+                margin-top: 0px;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                grid-auto-columns: minmax(0, 1fr);
+            }
+        }
+
+        .fb-6d9829e7 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: fit-content;
+            width: 100%;
+        }
+
+        .fb-89ff338f {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .fb-89ff338f {
+            transition: opacity 0.3s ease;
+        }
+
+        .fb-89ff338f:hover {
+            opacity: 0.8
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-89ff338f {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                justify-content: flex-start;
+            }
+        }
+
+        .fb-2c611535 {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            height: fit-content;
+            justify-content: space-between;
+            width: fit-content;
+        }
+
+        .fb-060aa00a {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .fb-1d09ada5 {
+            height: 40px;
+            object-fit: cover;
+            width: 40px;
+        }
+
+        .fb-0c3fea65 {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .fb-f15799f8 {
+            color: var(--gray-900, #171717);
+            font-size: 16px;
+            font-weight: 600;
+            height: fit-content;
+            left: auto;
+            letter-spacing: 0.24px;
+            line-height: 115%;
+            min-width: 30px;
+            position: static;
+            top: auto;
+            width: fit-content;
+        }
+
+        .fb-abd0b97d {
+            color: var(--gray-700, #525252);
+            font-size: 14px;
+            font-weight: 420;
+            height: fit-content;
+            left: auto;
+            letter-spacing: 0.28px;
+            line-height: 150%;
+            position: static;
+            top: auto;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 576px) {
+            .fb-abd0b97d {
+                width: 100%;
+            }
+        }
+
+        .fb-1cfffc9f {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            height: fit-content;
+            margin-top: 5px;
+            width: fit-content;
+        }
+
+        .fb-76a88270 {
+            color: var(--gray-600, #7C7C7C);
+            font-size: 12px;
+            font-weight: 420;
+            height: fit-content;
+            left: auto;
+            letter-spacing: 0.24px;
+            line-height: 115%;
+            position: static;
+            top: auto;
+            width: fit-content;
+        }
+
+        .fb-3296c6b4 {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            height: fit-content;
+            justify-content: flex-start;
+            width: fit-content;
+        }
+
+        .fb-c3e99668 {
+            align-items: center;
+            color: var(--gray-600, #7C7C7C);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            font-size: 12px;
+            font-weight: 420;
+            gap: 0px;
+            height: fit-content;
+            justify-content: flex-start;
+            left: auto;
+            letter-spacing: 0.24px;
+            line-height: 115%;
+            position: static;
+            top: auto;
+            width: fit-content;
+        }
+
+        .fb-1ec7b3a0 {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            height: fit-content;
+            justify-content: flex-start;
+            width: fit-content;
+        }
+
+        .fb-973602c1 {
+            color: var(--gray-600, #7C7C7C);
+            font-size: 12px;
+            font-weight: 420;
+            height: fit-content;
+            left: auto;
+            letter-spacing: 0.24px;
+            line-height: 115%;
+            position: static;
+            top: auto;
+            width: fit-content;
+        }
+
+        .fb-91a58da9 {
+            background: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            height: 1px;
+            left: auto;
+            position: static;
+            top: auto;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="/files/page_styles/builder-asset-style.css?v=a2fa4fcfd8">
+
+    <style>
+        <!---fonts
+        -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
@@ -46,166 +360,174 @@
         </div>
         <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/coworker-365.html">
-                  <div class="fb-20271afd">
-                    <img alt="Coworker 365 logo" class="fb-6ec04c09" src="/cw/assets/coworker-365.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Coworker 365</div>
-                      <div class="fb-6ddd697c __text_block__">Smart collaboration and productivity platform</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">ERP</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/coworker-365.html">
+                        <div class="fb-20271afd">
+                            <img alt="Coworker 365 logo" class="fb-6ec04c09" src="/cw/assets/coworker-365.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Coworker 365</div>
+                                <div class="fb-6ddd697c __text_block__">Smart collaboration and productivity platform
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">ERP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/business-management.html">
-                  <div class="fb-20271afd">
-                    <img alt="Business management logo" class="fb-6ec04c09" src="/cw/assets/business-management.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Business Management</div>
-                      <div class="fb-6ddd697c __text_block__">Comprehensive tools for running your business</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">ERP</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/business-management.html">
+                        <div class="fb-20271afd">
+                            <img alt="Business management logo" class="fb-6ec04c09"
+                                src="/cw/assets/business-management.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Business Management</div>
+                                <div class="fb-6ddd697c __text_block__">Comprehensive tools for running your business
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">ERP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/ai-coworker.html">
-                  <div class="fb-20271afd">
-                    <img alt="Ai coworker logo" class="fb-6ec04c09" src="/cw/assets/ai-coworker.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">AI Coworker</div>
-                      <div class="fb-6ddd697c __text_block__">AI assistant for daily workflows and decisions</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">AI</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/ai-coworker.html">
+                        <div class="fb-20271afd">
+                            <img alt="Ai coworker logo" class="fb-6ec04c09" src="/cw/assets/ai-coworker.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">AI Coworker</div>
+                                <div class="fb-6ddd697c __text_block__">AI assistant for daily workflows and decisions
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">AI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/people.html">
-                  <div class="fb-20271afd">
-                    <img alt="People logo" class="fb-6ec04c09" src="/cw/assets/people.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">People</div>
-                      <div class="fb-6ddd697c __text_block__">Manage employees, roles, and HR functions</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">HR</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/people.html">
+                        <div class="fb-20271afd">
+                            <img alt="People logo" class="fb-6ec04c09" src="/cw/assets/people.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">People</div>
+                                <div class="fb-6ddd697c __text_block__">Manage employees, roles, and HR functions</div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">HR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/sales.html">
-                  <div class="fb-20271afd">
-                    <img alt="Sales logo" class="fb-6ec04c09" src="/cw/assets/sales.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Sales</div>
-                      <div class="fb-6ddd697c __text_block__">Drive sales with pipeline and lead management</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">CRM</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/sales.html">
+                        <div class="fb-20271afd">
+                            <img alt="Sales logo" class="fb-6ec04c09" src="/cw/assets/sales.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Sales</div>
+                                <div class="fb-6ddd697c __text_block__">Drive sales with pipeline and lead management
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">CRM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/marketing.html">
-                  <div class="fb-20271afd">
-                    <img alt="Marketing logo" class="fb-6ec04c09" src="/cw/assets/marketing.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Marketing</div>
-                      <div class="fb-6ddd697c __text_block__">Campaigns, automation, and engagement tools</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">CRM</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/marketing.html">
+                        <div class="fb-20271afd">
+                            <img alt="Marketing logo" class="fb-6ec04c09" src="/cw/assets/marketing.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Marketing</div>
+                                <div class="fb-6ddd697c __text_block__">Campaigns, automation, and engagement tools
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">CRM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/finance.html">
-                  <div class="fb-20271afd">
-                    <img alt="Finance logo" class="fb-6ec04c09" src="/cw/assets/finance.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Finance</div>
-                      <div class="fb-6ddd697c __text_block__">Accounting, billing, and financial reporting</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">Finance</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/finance.html">
+                        <div class="fb-20271afd">
+                            <img alt="Finance logo" class="fb-6ec04c09" src="/cw/assets/finance.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Finance</div>
+                                <div class="fb-6ddd697c __text_block__">Accounting, billing, and financial reporting
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">Finance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <div class="fb-a1b5ab8f product-wrap">
+        </div>
+
+        <div class="fb-a1b5ab8f product-wrap">
             <div class="fb-5f591fdb">
-              <div class="fb-622d4cc7">
-                <a class="fb-7c58a8c4 __text_block__" href="/cw/service.html">
-                  <div class="fb-20271afd">
-                    <img alt="Service logo" class="fb-6ec04c09" src="/cw/assets/service.svg" />
-                    <div class="fb-9e1eda9b">
-                      <div class="fb-4b1e965d __text_block__">Service</div>
-                      <div class="fb-6ddd697c __text_block__">Deliver and manage customer service efficiently</div>
-                      <div class="fb-072cf5d2">
-                        <div class="fb-938f3261 __text_block__">Support</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="fb-6756d098 frappe-divider"></div>
+                <div class="fb-622d4cc7">
+                    <a class="fb-7c58a8c4 __text_block__" href="/cw/service.html">
+                        <div class="fb-20271afd">
+                            <img alt="Service logo" class="fb-6ec04c09" src="/cw/assets/service.svg" />
+                            <div class="fb-9e1eda9b">
+                                <div class="fb-4b1e965d __text_block__">Service</div>
+                                <div class="fb-6ddd697c __text_block__">Deliver and manage customer service efficiently
+                                </div>
+                                <div class="fb-072cf5d2">
+                                    <div class="fb-938f3261 __text_block__">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="fb-6756d098 frappe-divider"></div>
             </div>
-          </div>
-          
-          <!-- Repeat continues for remaining links... -->
-          
+        </div>
+
+        <!-- Repeat continues for remaining links... -->
+
     </div>
 
 
