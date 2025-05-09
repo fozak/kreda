@@ -1,0 +1,21 @@
+/* for docs product wrapper */
+
+.two-column {
+    display: flex;
+    gap: 1rem; /* space between columns */
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1; /* both columns take equal width */
+  }
+  
+  /* Optional: add padding, background, etc. */
+  .left-column {
+    padding: 1rem;
+  }
+  
+  .right-column {
+    padding: 1rem;
+  }
+  
