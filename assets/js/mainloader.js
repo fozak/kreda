@@ -1,6 +1,6 @@
 /* /files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 */
 
-const videos = document.querySelectorAll("video");
+/*const videos = document.querySelectorAll("video");
 videos.forEach(function (video) {
 	const toggle_video_control = function (e) {
 		if (video.paused) {
@@ -11,12 +11,12 @@ videos.forEach(function (video) {
 		}
 	};
 	video.addEventListener("click", toggle_video_control);
-});
+});*/
 
 /*files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34***/
 
-setup_sidebar_toggle();
-console.log("loaded");
+//setup_sidebar_toggle();
+//console.log("loaded");
 
 if (!(isMobile() || isTablet())) {
 	document.querySelectorAll(".nav-item-title").forEach(function (el) {
@@ -64,13 +64,13 @@ function isTablet() {
 
 /* files/page_scripts/builder-asset-script.js?v=20fae7dd77*/
 
-setup_navbar_tooltip();
-setup_sidebar_toggle();
-setup_scroll_position_restore();
+//setup_navbar_tooltip();
+//setup_sidebar_toggle();
+//setup_scroll_position_restore();
 //setup_thought_of_the_day();
 //setup_plausible();
-setup_navigation_shortcut();
-setup_video_player();
+//setup_navigation_shortcut();
+//setup_video_player();
 // setup_posthog();
 
 function setup_video_player() {
@@ -211,3 +211,9 @@ function setup_navigation_shortcut() {
 		}
 	});
 }
+
+setup_navbar_tooltip();
+setup_sidebar_toggle();
+setup_scroll_position_restore();
+setup_navigation_shortcut();
+
