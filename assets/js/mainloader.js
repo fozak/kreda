@@ -1,22 +1,3 @@
-/* /files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 */
-
-/*const videos = document.querySelectorAll("video");
-videos.forEach(function (video) {
-	const toggle_video_control = function (e) {
-		if (video.paused) {
-			video.setAttribute("controls", "");
-			video.removeEventListener("click", toggle_video_control);
-			video.play();
-			e.preventDefault();
-		}
-	};
-	video.addEventListener("click", toggle_video_control);
-});*/
-
-/*files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34***/
-
-//setup_sidebar_toggle();
-//console.log("loaded");
 
 if (!(isMobile() || isTablet())) {
 	document.querySelectorAll(".nav-item-title").forEach(function (el) {
@@ -62,27 +43,7 @@ function isTablet() {
 }
 
 
-/* files/page_scripts/builder-asset-script.js?v=20fae7dd77*/
 
-//setup_navbar_tooltip();
-//setup_sidebar_toggle();
-//setup_scroll_position_restore();
-//setup_thought_of_the_day();
-//setup_plausible();
-//setup_navigation_shortcut();
-//setup_video_player();
-// setup_posthog();
-
-function setup_video_player() {
-	if (!document.querySelector("video")) return;
-	loadStyle("https://cdn.plyr.io/3.6.4/plyr.css").then(() =>
-		loadScript("https://cdn.plyr.io/3.6.4/plyr.polyfilled.js").then(() => {
-			Plyr.setup("video", {
-				controls: ["play-large", "play", "progress", "mute", "volume", "settings", "fullscreen"],
-			});
-		})
-	);
-}
 
 function setup_navbar_tooltip() {
 	if (isMobile() || isTablet()) return;
@@ -173,25 +134,6 @@ function setup_scroll_position_restore() {
 	}
 }
 
-/*function setup_thought_of_the_day() {
-	window.addEventListener("DOMContentLoaded", function () {
-		const quotes = [ ... ];
-		const day_of_year = new Date().getDay();
-		const quote_element = document.querySelector(".f-thought em");
-		if (quote_element) {
-			quote_element.textContent = quotes[day_of_year % quotes.length];
-		}
-	});
-}*/
-
-/*function setup_plausible() {
-	const script = document.createElement("script");
-	script.defer = true;
-	script.dataset.api = "https://frappecloud.com/api/event";
-	script.dataset.domain = "frappe.io";
-	script.src = "https://frappecloud.com/js/script.js";
-	document.head.appendChild(script);
-}*/
 
 function setup_navigation_shortcut() {
 	document.addEventListener("keydown", function (e) {
